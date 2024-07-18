@@ -588,6 +588,14 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         //.teraShard = ITEM_FAIRY_TERA_SHARD,
         //.arceusForm = SPECIES_ARCEUS_FAIRY,
     },
+    [TYPE_BEAST] =
+    {
+        .name = _("Beast"),
+        .generic = _("a BEAST move"),
+        .palette = 15,
+        .zMove = MOVE_BREAKNECK_BLITZ,
+        .maxMove = MOVE_MAX_STRIKE,
+    },
     /*
     [TYPE_STELLAR] =
     {
