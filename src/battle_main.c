@@ -596,6 +596,14 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
         .zMove = MOVE_BREAKNECK_BLITZ,
         .maxMove = MOVE_MAX_STRIKE,
     },
+    [TYPE_SOUND] =
+    {
+        .name = _("Sound"),
+        .generic = _("a SOUND move"),
+        .palette = 15,
+        .zMove = MOVE_SUPERSONIC_SKYSTRIKE,
+        .maxMove = MOVE_MAX_AIRSTREAM,
+    }
     /*
     [TYPE_STELLAR] =
     {

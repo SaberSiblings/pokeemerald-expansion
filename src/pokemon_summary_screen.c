@@ -895,6 +895,10 @@ static const union AnimCmd sSpriteAnim_TypeBeast[] = {
     ANIMCMD_FRAME(TYPE_BEAST * 8, 0, FALSE, FALSE),
     ANIMCMD_END
 };
+static const union AnimCmd sSpriteAnim_TypeSound[] = {
+    ANIMCMD_FRAME(TYPE_SOUND * 8, 0, FALSE, FALSE),
+    ANIMCMD_END
+};
 static const union AnimCmd sSpriteAnim_CategoryCool[] = {
     ANIMCMD_FRAME((CONTEST_CATEGORY_COOL + NUMBER_OF_MON_TYPES) * 8, 0, FALSE, FALSE),
     ANIMCMD_END
@@ -936,6 +940,7 @@ static const union AnimCmd *const sSpriteAnimTable_MoveTypes[NUMBER_OF_MON_TYPES
     sSpriteAnim_TypeDark,
     sSpriteAnim_TypeFairy,
     sSpriteAnim_TypeBeast,
+    sSpriteAnim_TypeSound,
     sSpriteAnim_CategoryCool,
     sSpriteAnim_CategoryBeauty,
     sSpriteAnim_CategoryCute,
