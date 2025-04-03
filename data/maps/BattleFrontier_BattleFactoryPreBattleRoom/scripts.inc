@@ -226,6 +226,8 @@ BattleFrontier_BattleFactoryPreBattleRoom_EventScript_CommentOnOpponentType::
 	call_if_eq VAR_0x8005, TYPE_DRAGON, BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesDragon
 	call_if_eq VAR_0x8005, TYPE_DARK, BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesDark
 	call_if_eq VAR_0x8005, TYPE_FAIRY, BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesFairy
+	call_if_eq VAR_0x8005, TYPE_BEAST, BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesBeast
+	call_if_eq VAR_0x8005, TYPE_SOUND, BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesSound
 	call_if_eq VAR_0x8005, NUMBER_OF_MON_TYPES, BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentHasNoMostCommonType
 	return
 
@@ -299,6 +301,14 @@ BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesDark::
 
 BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesFairy::
 	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInFairyType, MSGBOX_DEFAULT
+	return
+
+BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesBeast::
+	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInBeastType, MSGBOX_DEFAULT
+	return
+
+BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentUsesSound::
+	msgbox BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInSoundType, MSGBOX_DEFAULT
 	return
 
 BattleFrontier_BattleFactoryPreBattleRoom_EventScript_OpponentHasNoMostCommonType::
@@ -567,6 +577,14 @@ BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInDarkType:
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInFairyType:
 	.string "The TRAINER is apparently skilled\n"
 	.string "in the handling of the FAIRY type.$"
+
+BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInBeastType:
+	.string "The TRAINER is apparently skilled\n"
+	.string "in the handling of the BEAST type.$"
+
+BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInSoundType:
+	.string "The TRAINER is apparently skilled\n"
+	.string "in the handling of the SOUND type.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInSteelType:
 	.string "The TRAINER is apparently skilled\n"

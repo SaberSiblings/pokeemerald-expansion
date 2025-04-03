@@ -944,7 +944,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .power = 35,
         #endif
         .effect = EFFECT_HIT,
-        .type = TYPE_NORMAL,
+        .type = TYPE_BEAST,
         .accuracy = B_UPDATED_MOVE_DATA >= GEN_5 ? 100 : 95,
         .pp = 35,
         .target = MOVE_TARGET_SELECTED,
@@ -1270,7 +1270,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "the battle."),
         .effect = EFFECT_ROAR,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = B_UPDATED_MOVE_DATA >= GEN_6 ? 0 : 100,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,

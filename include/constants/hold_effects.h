@@ -159,6 +159,9 @@ enum ItemHoldEffect
     HOLD_EFFECT_OGERPON_MASK,
     // Gen2 hold effect
     HOLD_EFFECT_BERSERK_GENE,
+    // Custom
+    HOLD_EFFECT_BEAST_POWER,
+    HOLD_EFFECT_SOUND_POWER,
 };
 
 #define HOLD_EFFECT_CHOICE(holdEffect) ((holdEffect == HOLD_EFFECT_CHOICE_BAND || holdEffect == HOLD_EFFECT_CHOICE_SCARF || holdEffect == HOLD_EFFECT_CHOICE_SPECS))

@@ -31,6 +31,7 @@ SINGLE_BATTLE_TEST("Tera Blast has correct effectiveness for every Tera Type")
     PARAMETRIZE { species = SPECIES_CHIKORITA; type = TYPE_FIRE;     }
     PARAMETRIZE { species = SPECIES_CHIKORITA; type = TYPE_BUG;      }
     PARAMETRIZE { species = SPECIES_CHIKORITA; type = TYPE_ICE;      }
+    PARAMETRIZE { species = SPECIES_CHIKORITA; type = TYPE_BEAST;      }
     PARAMETRIZE { species = SPECIES_CYNDAQUIL; type = TYPE_GROUND;   }
     PARAMETRIZE { species = SPECIES_CYNDAQUIL; type = TYPE_ROCK;     }
     PARAMETRIZE { species = SPECIES_CYNDAQUIL; type = TYPE_WATER;    }
@@ -44,6 +45,7 @@ SINGLE_BATTLE_TEST("Tera Blast has correct effectiveness for every Tera Type")
     PARAMETRIZE { species = SPECIES_SNEASEL;   type = TYPE_FIGHTING; }
     PARAMETRIZE { species = SPECIES_SNEASEL;   type = TYPE_STEEL;    }
     PARAMETRIZE { species = SPECIES_ABRA;      type = TYPE_DARK;     }
+    PARAMETRIZE { species = SPECIES_ABRA;      type = TYPE_SOUND;     }
 
     GIVEN {
         ASSUME(gSpeciesInfo[SPECIES_CHIKORITA].types[0] == TYPE_GRASS);

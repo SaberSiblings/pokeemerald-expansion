@@ -2464,6 +2464,8 @@ static const u8 sText_HoldEffectCovertCloak[] = _("Covert Cloak");
 static const u8 sText_HoldEffectLoadedDice[] = _("Loaded Dice");
 static const u8 sText_HoldEffectBoosterEnergy[] = _("Booster Energy");
 static const u8 sText_HoldEffectBerserkGene[] = _("Berserk Gene");
+static const u8 sText_HoldEffectBeastPower[] = _("Beast Power");
+static const u8 sText_HoldEffectSoundPower[] = _("Sound Power");
 static const u8 sText_HoldEffectOgerponMask[] = _("Ogerpon Mask");
 static const u8 *const sHoldEffectNames[] =
 {
@@ -2616,6 +2618,8 @@ static const u8 *const sHoldEffectNames[] =
     [HOLD_EFFECT_BOOSTER_ENERGY] = sText_HoldEffectBoosterEnergy,
     [HOLD_EFFECT_OGERPON_MASK] = sText_HoldEffectOgerponMask,
     [HOLD_EFFECT_BERSERK_GENE] = sText_HoldEffectBerserkGene,
+    [HOLD_EFFECT_BEAST_POWER] = sText_HoldEffectBeastPower,
+    [HOLD_EFFECT_SOUND_POWER] = sText_HoldEffectSoundPower,
 };
 static const u8 *GetHoldEffectName(u16 holdEffect)
 {

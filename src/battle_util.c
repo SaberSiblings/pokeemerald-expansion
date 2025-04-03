@@ -869,6 +869,8 @@ static const u8 sHoldEffectToType[][2] =
     {HOLD_EFFECT_DRAGON_POWER, TYPE_DRAGON},
     {HOLD_EFFECT_NORMAL_POWER, TYPE_NORMAL},
     {HOLD_EFFECT_FAIRY_POWER, TYPE_FAIRY},
+    {HOLD_EFFECT_BEAST_POWER, TYPE_BEAST},
+    {HOLD_EFFECT_SOUND_POWER, TYPE_SOUND},
 };
 
 // code
@@ -9408,8 +9410,8 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageCalculationData *
     case ABILITY_RIVALRY:
         if (AreBattlersOfSameGender(battlerAtk, battlerDef))
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.25));
-        else if (AreBattlersOfOppositeGender(battlerAtk, battlerDef))
-            modifier = uq4_12_multiply(modifier, UQ_4_12(0.75));
+        //else if (AreBattlersOfOppositeGender(battlerAtk, battlerDef))
+            //modifier = uq4_12_multiply(modifier, UQ_4_12(0.75));
         break;
     case ABILITY_ANALYTIC:
         if (GetBattlerTurnOrderNum(battlerAtk) == gBattlersCount - 1 && move != MOVE_FUTURE_SIGHT && move != MOVE_DOOM_DESIRE)
@@ -9590,6 +9592,8 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageCalculationData *
     case HOLD_EFFECT_DRAGON_POWER:
     case HOLD_EFFECT_NORMAL_POWER:
     case HOLD_EFFECT_FAIRY_POWER:
+    case HOLD_EFFECT_BEAST_POWER:
+    case HOLD_EFFECT_SOUND_POWER:
         for (i = 0; i < ARRAY_COUNT(sHoldEffectToType); i++)
         {
             if (holdEffectAtk == sHoldEffectToType[i][0])
