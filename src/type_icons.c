@@ -153,6 +153,16 @@ const union AnimCmd sSpriteAnim_TypeIcon_Fairy[] =
     ANIMCMD_FRAME(TYPE_ICON_2_FRAME(TYPE_FAIRY), 0),
     ANIMCMD_END
 };
+const union AnimCmd sSpriteAnim_TypeIcon_Beast[] =
+{
+    ANIMCMD_FRAME(TYPE_ICON_2_FRAME(TYPE_BEAST), 0),
+    ANIMCMD_END
+};
+const union AnimCmd sSpriteAnim_TypeIcon_Sound[] =
+{
+    ANIMCMD_FRAME(TYPE_ICON_2_FRAME(TYPE_SOUND), 0),
+    ANIMCMD_END
+};
 
 const union AnimCmd *const sSpriteAnimTable_TypeIcons[] =
 {
@@ -176,6 +186,8 @@ const union AnimCmd *const sSpriteAnimTable_TypeIcons[] =
     [TYPE_DRAGON] =     sSpriteAnim_TypeIcon_Dragon,
     [TYPE_DARK] =       sSpriteAnim_TypeIcon_Dark,
     [TYPE_FAIRY] =      sSpriteAnim_TypeIcon_Fairy,
+    [TYPE_BEAST] =      sSpriteAnim_TypeIcon_Beast,
+    [TYPE_SOUND] =      sSpriteAnim_TypeIcon_Sound,
     [TYPE_STELLAR] =    sSpriteAnim_TypeIcon_Mystery,
 };
 
