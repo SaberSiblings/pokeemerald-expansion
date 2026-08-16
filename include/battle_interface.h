@@ -86,6 +86,8 @@ enum
 #define TAG_FAIRY_INDICATOR_TILE        0xD78E
 #define TAG_STELLAR_INDICATOR_TILE      0xD78F
 #define TAG_TERA_TRIGGER_TILE           0xD790
+#define TAG_BEAST_TRIGGER_TILE          0xD791
+#define TAG_SOUND_TRIGGER_TILE          0xD792
 
 #define TAG_GIMMICK_TRIGGER_PAL         0xD777
 #define TAG_MEGA_INDICATOR_PAL          0xD778
