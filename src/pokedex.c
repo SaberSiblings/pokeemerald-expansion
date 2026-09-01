@@ -1230,26 +1230,25 @@ static const struct SearchOptionText sDexSearchColorOptions[] =
 
 static const struct SearchOptionText sDexSearchTypeOptions[] =
 {
-    {gText_DexEmptyString, gTypesInfo[TYPE_NONE].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_NORMAL].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_FIGHTING].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_FLYING].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_POISON].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_GROUND].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_ROCK].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_BUG].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_GHOST].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_STEEL].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_FIRE].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_WATER].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_GRASS].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_ELECTRIC].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_PSYCHIC].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_ICE].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_DRAGON].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_DARK].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_FAIRY].name},
-    {gText_DexEmptyString, gTypesInfo[TYPE_BEAST].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_NONE].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_NORMAL].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_FIGHTING].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_FLYING].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_POISON].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_GROUND].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_ROCK].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_BUG].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_GHOST].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_STEEL].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_FIRE].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_WATER].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_GRASS].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_ELECTRIC].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_PSYCHIC].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_ICE].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_DRAGON].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_DARK].name},
+    {sText_DexEmptyString, gTypesInfo[TYPE_FAIRY].name},
     {},
 };
 
@@ -1285,7 +1284,6 @@ static const enum Type sDexSearchTypeIds[NUMBER_OF_MON_TYPES] =
     TYPE_DRAGON,
     TYPE_DARK,
     TYPE_FAIRY,
-    TYPE_BEAST,
 };
 
 // Number pairs are the task data for tracking the cursor pos and scroll offset of each option list
