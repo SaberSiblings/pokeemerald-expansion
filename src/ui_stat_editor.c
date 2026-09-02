@@ -676,11 +676,11 @@ static u16 GetNumUnspentEVs(void)
 {
     u16 spentEVs = 0;
     u16 currentStat;
-    u16 maxEVsForLevel = (GetMonData(ReturnPartyMon(), MON_DATA_LEVEL) * 10);
+    u16 maxEVsForLevel = (GetMonData(ReturnPartyMon(), MON_DATA_LEVEL) * 12);
     u8 i;
 
-    if (maxEVsForLevel > 510)
-        maxEVsForLevel = 510;
+    if (maxEVsForLevel > 756)
+        maxEVsForLevel = 756;
 
     for(i = 0; i < 6; i++)
     {
@@ -795,7 +795,7 @@ static void PrintMonStats()
         AddTextPrinterParameterized4(WINDOW_2, 1, StatPrintData[statsToPrintEVs[i]].x, StatPrintData[statsToPrintEVs[i]].y, 0, 0, sMenuWindowFontColors[color], 0xFF, gStringVar2);
     }
 
-    if (sStatEditorDataPtr->evTotal < 510)
+    if (sStatEditorDataPtr->evTotal < 756)
     {
         AddTextPrinterParameterized4(WINDOW_2, FONT_NARROW, 18 + 10, 5, 0, 0, sMenuWindowFontColors[FONT_BLUE], 0xFF, sText_UnspentPoints);
 

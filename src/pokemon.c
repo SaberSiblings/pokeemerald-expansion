@@ -904,7 +904,7 @@ bool32 ComputePlayerShinyOdds(u32 personality, u32 value)
 
 void SetBoxMonIVs(struct BoxPokemon *mon, u8 fixedIV)
 {
-    u32 i, value;
+    /*u32 i, value;
 
     if (fixedIV < USE_RANDOM_IVS)
     {
@@ -934,7 +934,16 @@ void SetBoxMonIVs(struct BoxPokemon *mon, u8 fixedIV)
     iv = (value & (MAX_IV_MASK << 10)) >> 10;
     SetBoxMonData(mon, MON_DATA_SPDEF_IV, &iv);
 
-    SetBoxMonPerfectIVs(mon, gSpeciesInfo[species].perfectIVCount);
+    SetBoxMonPerfectIVs(mon, gSpeciesInfo[species].perfectIVCount);*/
+
+    u32 zero = 0;
+
+    SetBoxMonData(mon, MON_DATA_HP_IV, &zero);
+    SetBoxMonData(mon, MON_DATA_ATK_IV, &zero);
+    SetBoxMonData(mon, MON_DATA_DEF_IV, &zero);
+    SetBoxMonData(mon, MON_DATA_SPEED_IV, &zero);
+    SetBoxMonData(mon, MON_DATA_SPATK_IV, &zero);
+    SetBoxMonData(mon, MON_DATA_SPDEF_IV, &zero);
 }
 
 void SetBoxMonPerfectIVs(struct BoxPokemon *mon, u32 numPerfect)

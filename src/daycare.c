@@ -614,7 +614,7 @@ void TriggerPendingDaycareEgg(void)
 
 void InheritIVs(struct Pokemon *egg, struct DayCare *daycare)
 {
-    u32 i, iv, slot;
+    /*u32 i, iv, slot;
     enum Stat powerStat;
     u32 start = 0;
     u32 powerItemCount = 0;
@@ -670,7 +670,16 @@ void InheritIVs(struct Pokemon *egg, struct DayCare *daycare)
         randParents >>= 1;
         iv = GetBoxMonData(&daycare->mons[slot].mon, MON_DATA_HP_IV + selectedIvs[i]);
         SetMonData(egg, MON_DATA_HP_IV + selectedIvs[i], &iv);
-    }
+    }*/
+
+    u32 zero = 0;
+
+    SetMonData(egg, MON_DATA_HP_IV, &zero);
+    SetMonData(egg, MON_DATA_ATK_IV, &zero);
+    SetMonData(egg, MON_DATA_DEF_IV, &zero);
+    SetMonData(egg, MON_DATA_SPEED_IV, &zero);
+    SetMonData(egg, MON_DATA_SPATK_IV, &zero);
+    SetMonData(egg, MON_DATA_SPDEF_IV, &zero);
 
 }
 
