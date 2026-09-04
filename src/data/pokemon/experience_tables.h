@@ -1,10 +1,11 @@
 #define SQUARE(n) ((n) * (n))
 #define CUBE(n) ((n) * (n) * (n))
 
-#define EXP_SLOW(n) ((5 * CUBE(n)) / 4) // (5 * (n)^3) / 4
-#define EXP_FAST(n) ((4 * CUBE(n)) / 5) // (4 * (n)^3) / 5
-#define EXP_MEDIUM_FAST(n) (CUBE(n)) // (n)^3
-#define EXP_MEDIUM_SLOW(n) ((6 * CUBE(n)) / 5 - (15 * SQUARE(n)) + (100 * n) - 140)    // (6 * (n)^3) / 5 - (15 * (n)^2) + (100 * n) - 140
+#define EXP_FAST(n) ((9 * CUBE(n)) / 10) // (9 * (n)^3) / 10    (900K at LV 100)
+#define EXP_MEDIUM_FAST(n) (CUBE(n)) // (n)^3   (1M at LV 100)
+#define EXP_MEDIUM_SLOW(n) ((11 * CUBE(n)) / 10)    // (11 * (n)^3) / 10    (1.1M at LV 100)
+#define EXP_SLOW(n) ((5 * CUBE(n)) / 4) // (5 * (n)^3) / 4  (1.25M at LV 100)
+
 #define EXP_ERRATIC(n)                                      \
      (n <= 50) ? ((100 - n) * CUBE(n) /  50)                \
     :(n <= 68) ? ((150 - n) * CUBE(n) / 100)                \
