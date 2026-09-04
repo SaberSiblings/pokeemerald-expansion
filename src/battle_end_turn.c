@@ -149,7 +149,8 @@ static bool32 HandleEndTurnWeatherDamage(enum BattlerId battler)
          && gBattleMons[battler].volatiles.semiInvulnerable != STATE_UNDERGROUND
          && gBattleMons[battler].volatiles.semiInvulnerable != STATE_UNDERWATER
          && GetBattlerHoldEffect(battler) != HOLD_EFFECT_SAFETY_GOGGLES
-         && !IsAbilityAndRecord(battler, ability, ABILITY_MAGIC_GUARD))
+         && !IsAbilityAndRecord(battler, ability, ABILITY_MAGIC_GUARD)
+         && !IsAbilityAndRecord(battler, ability, ABILITY_WONDER_GUARD))
         {
             SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / 16);
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SANDSTORM;
@@ -172,7 +173,8 @@ static bool32 HandleEndTurnWeatherDamage(enum BattlerId battler)
              && gBattleMons[battler].volatiles.semiInvulnerable != STATE_UNDERGROUND
              && gBattleMons[battler].volatiles.semiInvulnerable != STATE_UNDERWATER
              && GetBattlerHoldEffect(battler) != HOLD_EFFECT_SAFETY_GOGGLES
-             && !IsAbilityAndRecord(battler, ability, ABILITY_MAGIC_GUARD))
+             && !IsAbilityAndRecord(battler, ability, ABILITY_MAGIC_GUARD)
+             && !IsAbilityAndRecord(battler, ability, ABILITY_WONDER_GUARD))
             {
                 SetPassiveDamageAmount(battler, GetNonDynamaxMaxHP(battler) / 16);
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_HAIL;
