@@ -1104,61 +1104,88 @@ enum NationalDexOrder
     F(MIGHTYENA) \
     F(ZIGZAGOON) \
     F(LINOONE) \
-    HOENN_DEX_IF(P_GALARIAN_FORMS, F(OBSTAGOON)) \
+    /*HOENN_DEX_IF(P_GALARIAN_FORMS, F(OBSTAGOON)) \*/
     F(WURMPLE) \
     F(SILCOON) \
     F(BEAUTIFLY) \
     F(CASCOON) \
     F(DUSTOX) \
+    F(LITLEO) \
+    F(PYROAR) \
+    F(WINGULL) \
+    F(PELIPPER) \
+    F(SURSKIT) \
+    F(MASQUERAIN) \
     F(LOTAD) \
     F(LOMBRE) \
     F(LUDICOLO) \
     F(SEEDOT) \
     F(NUZLEAF) \
     F(SHIFTRY) \
-    F(TAILLOW) \
-    F(SWELLOW) \
-    F(WINGULL) \
-    F(PELIPPER) \
+    F(PIDGEY) \
+    F(PIDGEOTTO) \
+    F(PIDGEOT) \
+    F(STARLY) \
+    F(STARAVIA) \
+    F(STARAPTOR) \
     F(RALTS) \
     F(KIRLIA) \
     F(GARDEVOIR) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(GALLADE)) \
-    F(SURSKIT) \
-    F(MASQUERAIN) \
+    F(TAILLOW) \
+    F(SWELLOW) \
+    F(AZURILL) \
+    F(MARILL) \
+    F(AZUMARILL) \
+    F(SWABLU) \
+    F(ALTARIA) \
     F(SHROOMISH) \
     F(BRELOOM) \
+    F(VENIPEDE) \
+    F(WHIRLIPEDE) \
+    F(SCOLIPEDE) \
+    F(ODDISH) \
+    F(GLOOM) \
+    F(VILEPLUME) \
+    F(BELLOSSOM) \
     F(SLAKOTH) \
     F(VIGOROTH) \
     F(SLAKING) \
-    F(ABRA) \
-    F(KADABRA) \
-    F(ALAKAZAM) \
+    HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(BUDEW)) \
+    F(ROSELIA) \
+    HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(ROSERADE)) \
     F(NINCADA) \
     F(NINJASK) \
     F(SHEDINJA) \
+    F(ABRA) \
+    F(KADABRA) \
+    F(ALAKAZAM) \
+    F(SHINX) \
+    F(LUXIO) \
+    F(LUXRAY) \
+    F(PURRLOIN) \
+    F(LIEPARD) \
+    F(SKITTY) \
+    F(DELCATTY) \
     F(WHISMUR) \
     F(LOUDRED) \
     F(EXPLOUD) \
+    F(ZUBAT) \
+    F(GOLBAT) \
+    F(CROBAT) \
+    F(NOIBAT) \
+    F(NOIVERN) \
     F(MAKUHITA) \
     F(HARIYAMA) \
     F(GOLDEEN) \
     F(SEAKING) \
     F(MAGIKARP) \
     F(GYARADOS) \
-    F(AZURILL) \
-    F(MARILL) \
-    F(AZUMARILL) \
     F(GEODUDE) \
     F(GRAVELER) \
     F(GOLEM) \
     F(NOSEPASS) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(PROBOPASS)) \
-    F(SKITTY) \
-    F(DELCATTY) \
-    F(ZUBAT) \
-    F(GOLBAT) \
-    F(CROBAT) \
     F(TENTACOOL) \
     F(TENTACRUEL) \
     F(SABLEYE) \
@@ -1182,15 +1209,8 @@ enum NationalDexOrder
     F(ELECTRODE) \
     F(VOLBEAT) \
     F(ILLUMISE) \
-    F(ODDISH) \
-    F(GLOOM) \
-    F(VILEPLUME) \
-    F(BELLOSSOM) \
     F(DODUO) \
     F(DODRIO) \
-    HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(BUDEW)) \
-    F(ROSELIA) \
-    HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(ROSERADE)) \
     F(GULPIN) \
     F(SWALOT) \
     F(CARVANHA) \
@@ -1217,8 +1237,6 @@ enum NationalDexOrder
     F(FLYGON) \
     F(CACNEA) \
     F(CACTURNE) \
-    F(SWABLU) \
-    F(ALTARIA) \
     F(ZANGOOSE) \
     F(SEVIPER) \
     F(LUNATONE) \

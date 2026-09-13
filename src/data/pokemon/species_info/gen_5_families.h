@@ -1226,7 +1226,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     [SPECIES_PURRLOIN] =
     {
         .baseHP        = 41,
-        .baseAttack    = 50,
+        .baseAttack    = 70,
         .baseDefense   = 37,
         .baseSpeed     = 66,
         .baseSpAttack  = 50,
@@ -1240,7 +1240,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_LIMBER, ABILITY_UNBURDEN, ABILITY_PRANKSTER },
+        .abilities = { ABILITY_SUPER_LUCK, ABILITY_UNBURDEN, ABILITY_PRANKSTER },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Purrloin"),
         .cryId = CRY_PURRLOIN,
@@ -1289,18 +1289,18 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sPurrloinLevelUpLearnset,
         .teachableLearnset = sPurrloinTeachableLearnset,
         .eggMoveLearnset = sPurrloinEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_LIEPARD}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_LIEPARD}),
     },
 
     [SPECIES_LIEPARD] =
     {
-        .baseHP        = 64,
-        .baseAttack    = 88,
-        .baseDefense   = 50,
-        .baseSpeed     = 106,
+        .baseHP        = 68,
+        .baseAttack    = 108,
+        .baseDefense   = 60,
+        .baseSpeed     = 116,
         .baseSpAttack  = 88,
-        .baseSpDefense = 50,
-        .types = MON_TYPES(TYPE_DARK),
+        .baseSpDefense = 60,
+        .types = MON_TYPES(TYPE_DARK, TYPE_BEAST),
         .catchRate = 90,
         .expYield = 156,
         .evYield_Speed = 2,
@@ -1309,7 +1309,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_LIMBER, ABILITY_UNBURDEN, ABILITY_PRANKSTER },
+        .abilities = { ABILITY_SUPER_LUCK, ABILITY_UNBURDEN, ABILITY_PRANKSTER },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Liepard"),
         .cryId = CRY_LIEPARD,
@@ -3839,8 +3839,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     {
         .baseHP        = 30,
         .baseAttack    = 45,
-        .baseDefense   = 59,
-        .baseSpeed     = 57,
+        .baseDefense   = 69,
+        .baseSpeed     = 67,
         .baseSpAttack  = 30,
         .baseSpDefense = 39,
         .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
@@ -3853,11 +3853,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-    #if P_UPDATED_ABILITIES >= GEN_6
-        .abilities = { ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_SPEED_BOOST },
-    #else
-        .abilities = { ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_QUICK_FEET },
-    #endif
+    //#if P_UPDATED_ABILITIES >= GEN_6
+        .abilities = { ABILITY_POISON_POINT, ABILITY_INTIMIDATE, ABILITY_SPEED_BOOST },
+    //#else
+    //    .abilities = { ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_QUICK_FEET },
+    //#endif
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Venipede"),
         .cryId = CRY_VENIPEDE,
@@ -3910,15 +3910,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sVenipedeLevelUpLearnset,
         .teachableLearnset = sVenipedeTeachableLearnset,
         .eggMoveLearnset = sVenipedeEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 22, SPECIES_WHIRLIPEDE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 15, SPECIES_WHIRLIPEDE}),
     },
 
     [SPECIES_WHIRLIPEDE] =
     {
         .baseHP        = 40,
-        .baseAttack    = 55,
+        .baseAttack    = 75,
         .baseDefense   = 99,
-        .baseSpeed     = 47,
+        .baseSpeed     = 87,
         .baseSpAttack  = 40,
         .baseSpDefense = 79,
         .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
@@ -3931,11 +3931,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-    #if P_UPDATED_ABILITIES >= GEN_6
-        .abilities = { ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_SPEED_BOOST },
-    #else
-        .abilities = { ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_QUICK_FEET },
-    #endif
+    //#if P_UPDATED_ABILITIES >= GEN_6
+        .abilities = { ABILITY_POISON_POINT, ABILITY_INTIMIDATE, ABILITY_SPEED_BOOST },
+    //#else
+    //    .abilities = { ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_QUICK_FEET },
+    //#endif
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Whirlipede"),
         .cryId = CRY_WHIRLIPEDE,
@@ -3986,17 +3986,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         )
         .levelUpLearnset = sWhirlipedeLevelUpLearnset,
         .teachableLearnset = sWhirlipedeTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_SCOLIPEDE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_SCOLIPEDE}),
     },
 
     [SPECIES_SCOLIPEDE] =
     {
         .baseHP        = 60,
-        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 100 : 90,
-        .baseDefense   = 89,
+        .baseAttack    = 100, //P_UPDATED_STATS >= GEN_6 ? 100 : 90,
+        .baseDefense   = 109,
         .baseSpeed     = 112,
         .baseSpAttack  = 55,
-        .baseSpDefense = 69,
+        .baseSpDefense = 99,
         .types = MON_TYPES(TYPE_BUG, TYPE_POISON),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
@@ -4013,11 +4013,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
-    #if P_UPDATED_ABILITIES >= GEN_6
-        .abilities = { ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_SPEED_BOOST },
-    #else
-        .abilities = { ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_QUICK_FEET },
-    #endif
+    //#if P_UPDATED_ABILITIES >= GEN_6
+        .abilities = { ABILITY_POISON_POINT, ABILITY_INTIMIDATE, ABILITY_SPEED_BOOST },
+    //#else
+    //    .abilities = { ABILITY_POISON_POINT, ABILITY_SWARM, ABILITY_QUICK_FEET },
+    //#endif
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Scolipede"),
         .cryId = CRY_SCOLIPEDE,
