@@ -3361,7 +3361,8 @@ static bool32 DoesBattlerTakeSandstormDamage(enum BattlerId battlerId, enum Abil
       && ability != ABILITY_SAND_FORCE
       && ability != ABILITY_SAND_RUSH
       && ability != ABILITY_MAGIC_GUARD
-      && ability != ABILITY_OVERCOAT)
+      && ability != ABILITY_OVERCOAT
+      && ability != ABILITY_WONDER_GUARD)
         return TRUE;
     return FALSE;
 }
@@ -3375,7 +3376,8 @@ static bool32 DoesBattlerTakeHailDamage(enum BattlerId battlerId, enum Ability a
       && ability != ABILITY_SNOW_CLOAK
       && ability != ABILITY_ICE_BODY
       && ability != ABILITY_MAGIC_GUARD
-      && ability != ABILITY_OVERCOAT)
+      && ability != ABILITY_OVERCOAT
+      && ability != ABILITY_WONDER_GUARD)
         return TRUE;
     return FALSE;
 }
