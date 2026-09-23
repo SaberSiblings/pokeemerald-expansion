@@ -6752,7 +6752,7 @@
       },
       {
         "Level": 36,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 39,
@@ -6852,7 +6852,7 @@
       },
       {
         "Level": 38,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 43,
@@ -11892,7 +11892,7 @@
       },
       {
         "Level": 35,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 40,
@@ -17885,7 +17885,7 @@
     "EggMoves": [
       "MOVE_BRAVE_BIRD",
       "MOVE_CONFUSE_RAY",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEATHER_DANCE",
       "MOVE_FLATTER",
       "MOVE_PERISH_SONG",
@@ -20500,7 +20500,7 @@
       },
       {
         "Level": 25,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       }
     ],
     "PreEvoMoves": [],
@@ -20622,7 +20622,7 @@
       },
       {
         "Level": 36,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 40,
@@ -35541,7 +35541,7 @@
       },
       {
         "Level": 39,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 43,
@@ -35647,7 +35647,7 @@
       },
       {
         "Level": 46,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 50,
@@ -35765,7 +35765,7 @@
       },
       {
         "Level": 52,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 59,
@@ -38516,7 +38516,7 @@
     "EggMoves": [
       "MOVE_BRAVE_BIRD",
       "MOVE_CONFUSE_RAY",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEATHER_DANCE",
       "MOVE_FLATTER",
       "MOVE_PERISH_SONG",
@@ -62646,7 +62646,7 @@
       },
       {
         "Level": 27,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 31,
@@ -62747,7 +62747,7 @@
       },
       {
         "Level": 32,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 37,
@@ -62854,7 +62854,7 @@
       },
       {
         "Level": 34,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 40,
@@ -69036,7 +69036,7 @@
       },
       {
         "Level": 28,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 32,
@@ -69122,7 +69122,7 @@
       },
       {
         "Level": 34,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 40,
@@ -69226,7 +69226,7 @@
       },
       {
         "Level": 34,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 42,
@@ -70375,7 +70375,7 @@
       },
       {
         "Level": 35,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 42,
@@ -81238,7 +81238,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 1,
@@ -85427,7 +85427,7 @@
       },
       {
         "Level": 28,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 35,
@@ -92327,7 +92327,7 @@
       },
       {
         "Level": 35,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 40,

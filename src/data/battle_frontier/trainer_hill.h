@@ -3543,7 +3543,7 @@ static const struct TrainerHillFloor sFloors_Unique[] = {
                                         {
                                             .species = SPECIES_ZAPDOS,
                                             .heldItem = ITEM_BRIGHT_POWDER,
-                                            .moves = {MOVE_THUNDERBOLT, MOVE_DRILL_PECK, MOVE_THUNDER_WAVE, MOVE_AGILITY},
+                                            .moves = {MOVE_THUNDERBOLT, MOVE_METEOR_DIVE, MOVE_THUNDER_WAVE, MOVE_AGILITY},
                                             .speedEV = 255,
                                             .spAttackEV = 255,
                                             .otId = TRAINER_HILL_OTID,

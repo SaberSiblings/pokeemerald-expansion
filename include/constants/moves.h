@@ -74,7 +74,7 @@ enum __attribute__((packed)) Move
     MOVE_AURORA_BEAM = 62,
     MOVE_HYPER_BEAM = 63,
     MOVE_PECK = 64,
-    MOVE_DRILL_PECK = 65,
+    MOVE_METEOR_DIVE = 65,
     MOVE_SUBMISSION = 66,
     MOVE_LOW_KICK = 67,
     MOVE_COUNTER = 68,

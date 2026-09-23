@@ -11,11 +11,11 @@ SINGLE_BATTLE_TEST("Body Press uses physical defense stat of target", s16 damage
 {
     enum Move move;
 
-    PARAMETRIZE { move = MOVE_DRILL_PECK; }
+    PARAMETRIZE { move = MOVE_METEOR_DIVE; }
     PARAMETRIZE { move = MOVE_BODY_PRESS; }
 
     GIVEN {
-        ASSUME(GetMovePower(MOVE_DRILL_PECK) == GetMovePower(MOVE_BODY_PRESS));
+        ASSUME(GetMovePower(MOVE_METEOR_DIVE) == GetMovePower(MOVE_BODY_PRESS));
         ASSUME_STAT_CHANGE(MOVE_CHARM, attack: -2);
         PLAYER(SPECIES_MEW);
         OPPONENT(SPECIES_SHELLDER);

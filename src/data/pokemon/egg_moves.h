@@ -1656,7 +1656,7 @@ static const u16 sTogepiEggMoveLearnset[] = {
 #if P_FAMILY_NATU
 static const u16 sNatuEggMoveLearnset[] = {
     MOVE_HAZE,
-    MOVE_DRILL_PECK,
+    MOVE_METEOR_DIVE,
     MOVE_QUICK_ATTACK,
     MOVE_FEINT_ATTACK,
     MOVE_STEEL_WING,
@@ -1873,7 +1873,7 @@ static const u16 sWooperPaldeaEggMoveLearnset[] = {
 #if P_FAMILY_MURKROW
 static const u16 sMurkrowEggMoveLearnset[] = {
     MOVE_WHIRLWIND,
-    MOVE_DRILL_PECK,
+    MOVE_METEOR_DIVE,
     MOVE_MIRROR_MOVE,
     MOVE_WING_ATTACK,
     MOVE_SKY_ATTACK,
@@ -2274,7 +2274,7 @@ static const u16 sMantineEggMoveLearnset[] = {
 
 #if P_FAMILY_SKARMORY
 static const u16 sSkarmoryEggMoveLearnset[] = {
-    MOVE_DRILL_PECK,
+    MOVE_METEOR_DIVE,
     MOVE_PURSUIT,
     MOVE_WHIRLWIND,
     MOVE_SKY_ATTACK,

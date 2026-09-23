@@ -2193,7 +2193,7 @@
       },
       {
         "Level": 37,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       }
     ],
     "PreEvoMoves": [],
@@ -2306,7 +2306,7 @@
       },
       {
         "Level": 47,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 53,
@@ -10602,7 +10602,7 @@
       },
       {
         "Level": 37,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 41,
@@ -10713,7 +10713,7 @@
       },
       {
         "Level": 41,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 47,
@@ -18579,7 +18579,7 @@
       },
       {
         "Level": 1,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 1,
@@ -18627,7 +18627,7 @@
       },
       {
         "Level": 71,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 78,
@@ -23057,7 +23057,7 @@
     ],
     "EggMoves": [
       "MOVE_ALLY_SWITCH",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEATHER_DANCE",
       "MOVE_FAINT_ATTACK",
       "MOVE_HAZE",
@@ -23213,7 +23213,7 @@
     ],
     "EggMoves": [
       "MOVE_ALLY_SWITCH",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEATHER_DANCE",
       "MOVE_FAINT_ATTACK",
       "MOVE_HAZE",
@@ -25920,7 +25920,7 @@
       "MOVE_ASSURANCE",
       "MOVE_BRAVE_BIRD",
       "MOVE_CONFUSE_RAY",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEATHER_DANCE",
       "MOVE_FAINT_ATTACK",
       "MOVE_FLATTER",
@@ -29794,7 +29794,7 @@
       "MOVE_ASSURANCE",
       "MOVE_BRAVE_BIRD",
       "MOVE_CURSE",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_ENDURE",
       "MOVE_GUARD_SWAP",
       "MOVE_PURSUIT",
@@ -51566,7 +51566,7 @@
       },
       {
         "Level": 39,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 43,
@@ -51689,7 +51689,7 @@
       },
       {
         "Level": 46,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 50,
@@ -51826,7 +51826,7 @@
       },
       {
         "Level": 52,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 59,
@@ -55908,7 +55908,7 @@
       "MOVE_ASSURANCE",
       "MOVE_BRAVE_BIRD",
       "MOVE_CONFUSE_RAY",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEATHER_DANCE",
       "MOVE_FAINT_ATTACK",
       "MOVE_FLATTER",

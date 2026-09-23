@@ -1751,12 +1751,12 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Peck,
     },
 
-    [MOVE_DRILL_PECK] =
+    [MOVE_METEOR_DIVE] =
     {
-        .name = COMPOUND_STRING("Drill Peck"),
+        .name = COMPOUND_STRING("Meteor Dive"),
         .description = COMPOUND_STRING(
-            "A corkscrewing attack with\n"
-            "the beak acting as a drill."),
+            "Ascends and rapidly dives down\n"
+            "to slam the foe with gravity."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_FLYING,

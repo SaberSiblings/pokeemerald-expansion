@@ -648,7 +648,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
                 .fixedIV = MAX_PER_STAT_IVS,
                 .nature = NATURE_MILD,
                 .evs = {6, 0, 252, 252, 0, 0},
-                .moves = {MOVE_THUNDER, MOVE_DETECT, MOVE_DRILL_PECK, MOVE_LIGHT_SCREEN},
+                .moves = {MOVE_THUNDER, MOVE_DETECT, MOVE_METEOR_DIVE, MOVE_LIGHT_SCREEN},
             },
             {
                 .species = SPECIES_MOLTRES,

@@ -1351,7 +1351,7 @@
       },
       {
         "Level": 32,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       }
     ],
     "PreEvoMoves": [],
@@ -1431,7 +1431,7 @@
       },
       {
         "Level": 47,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       }
     ],
     "PreEvoMoves": [],
@@ -6083,7 +6083,7 @@
       },
       {
         "Level": 27,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 32,
@@ -6165,7 +6165,7 @@
       },
       {
         "Level": 27,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 37,
@@ -10609,7 +10609,7 @@
       },
       {
         "Level": 24,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 32,

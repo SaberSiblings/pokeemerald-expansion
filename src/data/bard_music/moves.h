@@ -526,7 +526,7 @@ static const struct BardSoundTemplate sBardSoundTemplates_Moves[MOVES_COUNT][MAX
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [MOVE_DRILL_PECK] = {
+    [MOVE_METEOR_DIVE] = {
         { .songId = PHONEME_ID(PH_KIT_SOLO) },
         { .songId = PHONEME_ID(PH_DRESS_SOLO) },
         PREV_BARD_SOUND,

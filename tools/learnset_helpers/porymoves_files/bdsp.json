@@ -1892,7 +1892,7 @@
       },
       {
         "Level": 36,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       }
     ],
     "PreEvoMoves": [],
@@ -1991,7 +1991,7 @@
       },
       {
         "Level": 41,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 45,
@@ -9122,7 +9122,7 @@
       },
       {
         "Level": 43,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 47,
@@ -9233,7 +9233,7 @@
       },
       {
         "Level": 47,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 52,
@@ -16020,7 +16020,7 @@
       },
       {
         "Level": 35,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 40,
@@ -19753,7 +19753,7 @@
     ],
     "EggMoves": [
       "MOVE_ALLY_SWITCH",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEATHER_DANCE",
       "MOVE_HAZE",
       "MOVE_QUICK_ATTACK",
@@ -19867,7 +19867,7 @@
     ],
     "EggMoves": [
       "MOVE_ALLY_SWITCH",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEATHER_DANCE",
       "MOVE_HAZE",
       "MOVE_QUICK_ATTACK",
@@ -22289,7 +22289,7 @@
       "MOVE_ASSURANCE",
       "MOVE_BRAVE_BIRD",
       "MOVE_CONFUSE_RAY",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEATHER_DANCE",
       "MOVE_FLATTER",
       "MOVE_PERISH_SONG",
@@ -25278,7 +25278,7 @@
       },
       {
         "Level": 25,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       }
     ],
     "PreEvoMoves": [],
@@ -25488,7 +25488,7 @@
       },
       {
         "Level": 36,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 40,
@@ -25547,7 +25547,7 @@
       "MOVE_ASSURANCE",
       "MOVE_BRAVE_BIRD",
       "MOVE_CURSE",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEINT",
       "MOVE_GUARD_SWAP",
       "MOVE_NIGHT_SLASH",
@@ -44293,7 +44293,7 @@
       },
       {
         "Level": 39,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 43,
@@ -44411,7 +44411,7 @@
       },
       {
         "Level": 46,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 50,
@@ -44540,7 +44540,7 @@
       },
       {
         "Level": 52,
-        "Move": "MOVE_DRILL_PECK"
+        "Move": "MOVE_METEOR_DIVE"
       },
       {
         "Level": 59,
@@ -48154,7 +48154,7 @@
       "MOVE_ASSURANCE",
       "MOVE_BRAVE_BIRD",
       "MOVE_CONFUSE_RAY",
-      "MOVE_DRILL_PECK",
+      "MOVE_METEOR_DIVE",
       "MOVE_FEATHER_DANCE",
       "MOVE_FLATTER",
       "MOVE_PERISH_SONG",
