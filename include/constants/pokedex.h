@@ -1104,7 +1104,7 @@ enum NationalDexOrder
     F(MIGHTYENA) \
     F(ZIGZAGOON) \
     F(LINOONE) \
-    /*HOENN_DEX_IF(P_GALARIAN_FORMS, F(OBSTAGOON)) */\
+    F(OBSTAGOON) \
     F(WURMPLE) \
     F(SILCOON) \
     F(BEAUTIFLY) \
