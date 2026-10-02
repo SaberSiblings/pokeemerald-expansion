@@ -1103,7 +1103,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
+        .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     //#if P_UPDATED_ABILITIES >= GEN_4
         .abilities = { ABILITY_GLUTTONY, ABILITY_GUTS, ABILITY_DEFIANT },
@@ -1181,7 +1181,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
+        .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
     //#if P_UPDATED_ABILITIES >= GEN_4
         .abilities = { ABILITY_GLUTTONY, ABILITY_GUTS, ABILITY_DEFIANT },
@@ -1238,7 +1238,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .levelUpLearnset = sLinooneLevelUpLearnset,
         .teachableLearnset = sLinooneTeachableLearnset,
         .formSpeciesIdTable = sLinooneFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_OBSTAGOON}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_PROTECTOR, SPECIES_OBSTAGOON}),
     },
 
 #if P_GALARIAN_FORMS
@@ -1390,7 +1390,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .genderRatio = PERCENT_FEMALE(50),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
+        .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_GLUTTONY, ABILITY_GUTS, ABILITY_DEFIANT },
         .bodyColor = BODY_COLOR_GRAY,
