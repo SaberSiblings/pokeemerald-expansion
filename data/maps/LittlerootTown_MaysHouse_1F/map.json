@@ -3,7 +3,6 @@
   "name": "LittlerootTown_MaysHouse_1F",
   "layout": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
   "music": "MUS_LITTLEROOT",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -170,7 +169,17 @@
       "var": "VAR_LITTLEROOT_RIVAL_STATE",
       "var_value": "2",
       "script": "LittlerootTown_MaysHouse_1F_EventScript_MeetRival2"
+    },
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_INTRO_STATE",
+      "var_value": "4",
+      "script": "LittlerootTown_MaysHouse_1F_EventScript_GoSeeRoom"
     }
   ],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

@@ -1770,7 +1770,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .contestCategory = CONTEST_CATEGORY_COOL,
         .contestComboStarterId = 0,
         .contestComboMoves = {COMBO_STARTER_PECK},
-        .battleAnimScript = gBattleAnimMove_DrillPeck,
+        .battleAnimScript = gBattleAnimMove_MeteorDive,
         .validApprenticeMove = TRUE,
     },
 

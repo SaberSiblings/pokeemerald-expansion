@@ -114,8 +114,8 @@ LittlerootTown_BrendansHouse_1F_EventScript_GoSeeRoom::
 	lockall
 	setvar VAR_0x8004, LOCALID_PLAYERS_HOUSE_1F_MOM
 	setvar VAR_0x8005, MALE
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
+	//applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterLeft
+	//waitmovement 0
 	goto PlayersHouse_1F_EventScript_MomGoSeeRoom
 	end
 
@@ -284,13 +284,15 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2:
 	step_end
 
 PlayersHouse_1F_Text_IsntItNiceInHere:
-	.string "MOM: See, {PLAYER}?\n"
+	.string "MOM: Look around, {PLAYER}!\n"
 	.string "Isn't it nice in here, too?$"
 
-PlayersHouse_1F_Text_MoversPokemonGoSetClock:
-	.string "The mover's POKéMON do all the work\n"
+PlayersHouse_1F_Text_MoversPokemon:
+	.string "The mover's Pokémon do all the work\n"
 	.string "of moving us in and cleaning up after.\l"
-	.string "This is so convenient!\p"
+	.string "This is so convenient!$"
+
+PlayersHouse_1F_Text_GoSetClock:
 	.string "{PLAYER}, your room is upstairs.\n"
 	.string "Go check it out, dear!\p"
 	.string "DAD bought you a new clock to mark\n"

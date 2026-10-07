@@ -147,8 +147,8 @@ LittlerootTown_MaysHouse_1F_EventScript_GoSeeRoom::
 	lockall
 	setvar VAR_0x8004, LOCALID_PLAYERS_HOUSE_1F_MOM
 	setvar VAR_0x8005, FEMALE
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
+	//applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterRight
+	//waitmovement 0
 	goto PlayersHouse_1F_EventScript_MomGoSeeRoom
 	end
 

@@ -58,7 +58,7 @@ struct SioInfo
     u8 playerCount;
     u8 linkPlayerIdx[RFU_CHILD_MAX];
     struct LinkPlayer linkPlayers[MAX_RFU_PLAYERS];
-    u8 filler[92];
+    u8 filler[76];
 };
 
 // Struct is mostly empty, presumably because usage of

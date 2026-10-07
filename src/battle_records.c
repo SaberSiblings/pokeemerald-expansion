@@ -306,8 +306,8 @@ static void PrintLinkBattleRecord(struct LinkBattleRecord *record, u8 y, s32 lan
     }
     else
     {
-        StringFillWithTerminator(gStringVar1, 8);
-        StringCopyN(gStringVar1, record->name, 7);
+        StringFillWithTerminator(gStringVar1, PLAYER_NAME_LENGTH + 1);
+        StringCopyN(gStringVar1, record->name, PLAYER_NAME_LENGTH);
         ConvertInternationalString(gStringVar1, language);
 
         AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar1, 8, (y * 8) + 1, 0, NULL);

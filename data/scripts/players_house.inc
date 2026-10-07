@@ -4,26 +4,40 @@ PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet::
 
 PlayersHouse_1F_EventScript_EnterHouseMovingIn::
 	msgbox PlayersHouse_1F_Text_IsntItNiceInHere, MSGBOX_DEFAULT
-	applymovement VAR_0x8004, Common_Movement_FacePlayer
-	waitmovement 0
+	//applymovement VAR_0x8004, Common_Movement_FacePlayer
+	//waitmovement 0
 	call_if_eq VAR_0x8005, MALE, PlayersHouse_1F_EventScript_MomFacePlayerMovingInMale
 	call_if_eq VAR_0x8005, FEMALE, PlayersHouse_1F_EventScript_MomFacePlayerMovingInFemale
-	msgbox PlayersHouse_1F_Text_MoversPokemonGoSetClock, MSGBOX_DEFAULT
+	msgbox PlayersHouse_1F_Text_MoversPokemon, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_LITTLEROOT_INTRO_STATE, 4
-	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerWalkIn
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
+
+	applymovement VAR_0x8004, Common_Movement_FacePlayer
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
+
+	msgbox PlayersHouse_1F_Text_GoSetClock, MSGBOX_DEFAULT
+	closemessage
+
+	setvar VAR_LITTLEROOT_INTRO_STATE, 4
+	//applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerWalkIn
+	//applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
+	//waitmovement 0
 	releaseall
 	end
 
 PlayersHouse_1F_EventScript_MomFacePlayerMovingInMale::
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+	applymovement VAR_0x8004, PlayersHouse_1F_Movement_MomLookAtMoversMale
+	waitmovement 0
+	applymovement VAR_0x8004, PlayersHouse_1F_Movement_PlayerLookAtMoversMale
+	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerLookAtMoversMale
 	waitmovement 0
 	return
 
 PlayersHouse_1F_EventScript_MomFacePlayerMovingInFemale::
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement VAR_0x8004, PlayersHouse_1F_Movement_MomLookAtMoversFemale
+	waitmovement 0
+	applymovement VAR_0x8004, PlayersHouse_1F_Movement_PlayerLookAtMoversFemale
+	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerLookAtMoversFemale
 	waitmovement 0
 	return
 
@@ -34,7 +48,7 @@ PlayersHouse_1F_Movement_PlayerWalkIn:
 PlayersHouse_1F_EventScript_MomGoSeeRoom::
 	msgbox PlayersHouse_1F_Text_ArentYouInterestedInRoom, MSGBOX_DEFAULT
 	closemessage
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
+	//applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
 	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_MovePlayerAwayFromDoor
 	waitmovement 0
 	releaseall
@@ -211,6 +225,33 @@ PlayersHouse_1F_EventScript_WatchGymBroadcast::
 	setflag FLAG_SYS_TV_HOME
 	delay 35
 	return
+
+PlayersHouse_1F_Movement_MomLookAtMoversMale:
+	walk_up
+	walk_left
+	walk_in_place_faster_down
+	step_end
+
+PlayersHouse_1F_Movement_PlayerLookAtMoversMale:
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	step_end
+
+PlayersHouse_1F_Movement_MomLookAtMoversFemale:
+	walk_up
+	walk_right
+	walk_in_place_faster_down
+	delay_8
+	step_end
+
+PlayersHouse_1F_Movement_PlayerLookAtMoversFemale:
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	step_end
 
 PlayersHouse_1F_Movement_MomApproachDadMale:
 	walk_up

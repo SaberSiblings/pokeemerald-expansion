@@ -123,7 +123,7 @@ LittlerootTown_EventScript_StepOffTruckFemale::
 	setvar VAR_0x8004, 14
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK_TWO
 	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
 	waitstate
 	releaseall
@@ -134,6 +134,9 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	playse SE_LEDGE
 	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerStepOffTruck
 	waitmovement 0
+	removeobject FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_HIGH
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK //removes truck at z=4 for mom cutscene
+
 	opendoor VAR_0x8004, VAR_0x8005
 	waitdooranim
 	addobject LOCALID_LITTLEROOT_MOM
@@ -144,8 +147,26 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	delay 10
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayerAtTruck
 	waitmovement 0
-	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_DEFAULT
+	msgbox LittlerootTown_Text_Greeting, MSGBOX_DEFAULT
 	closemessage
+
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_MomLookAroundMale
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_MomLookAroundFemale
+
+	msgbox LittlerootTown_Text_OurNewHome, MSGBOX_DEFAULT
+	closemessage
+
+	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomFaceHouse
+	waitmovement 0
+	msgbox LittlerootTown_Text_AdmireHouse
+	closemessage
+
+	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomFacePlayer
+	waitmovement 0
+	msgbox LittlerootTown_Text_LetsGoInside, MSGBOX_DEFAULT
+	closemessage
+	
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachDoor
 	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerApproachDoor
 	waitmovement 0
@@ -163,6 +184,16 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	return
 
+LittlerootTown_EventScript_MomLookAroundMale:
+	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomLookAroundMale
+	waitmovement 0
+	return
+
+LittlerootTown_EventScript_MomLookAroundFemale:
+	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomLookAroundFemale
+	waitmovement 0
+	return
+
 LittlerootTown_Movement_MomExitHouse:
 	walk_down
 	step_end
@@ -170,6 +201,80 @@ LittlerootTown_Movement_MomExitHouse:
 LittlerootTown_Movement_MomApproachPlayerAtTruck:
 	walk_down
 	walk_in_place_faster_left
+	step_end
+
+LittlerootTown_Movement_MomLookAroundMale:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_up
+	walk_in_place_right
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_up
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+LittlerootTown_Movement_MomLookAroundFemale:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_down
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_left
+	walk_up
+	walk_in_place_left
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_up
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_in_place_left
+	step_end
+
+LittlerootTown_Movement_MomFaceHouse:
+	walk_in_place_up
+	delay_8
+	step_end
+
+LittlerootTown_Movement_MomFacePlayer:
+	walk_in_place_left
+	delay_4
 	step_end
 
 LittlerootTown_Movement_MomApproachDoor:
@@ -903,17 +1008,29 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	delay 30
 	return
 
-LittlerootTown_Text_OurNewHomeLetsGoInside:
+LittlerootTown_Text_Greeting:
 	.string "MOM: {PLAYER}, we're here, honey!\p"
-	.string "It must be tiring riding with our things\n"
+	.string "Sorry to make you ride with our things\n"
 	.string "in the moving truck.\p"
-	.string "Well, this is LITTLEROOT TOWN.\p"
-	.string "How do you like it?\n"
-	.string "This is our new home!\p"
-	.string "It has a quaint feel, but it seems to be\n"
-	.string "an easy place to live, don't you think?\p"
-	.string "And, you get your own room, {PLAYER}!\n"
-	.string "Let's go inside.$"
+	.string "Hopefully the ride wasn't too bumpy!$"
+
+LittlerootTown_Text_OurNewHome:
+	.string "Well, this is Littleroot Town, dear.\n"
+	.string "It's a pretty little place, isn't it?\p"
+	.string "It's a lot smaller than the city, that's\n"
+	.string "for sure, but I think we'll fit right in!\p"
+	.string "It also helps that we're pretty close to\n"
+	.string "where your father works now.$"
+
+LittlerootTown_Text_AdmireHouse:
+	.string "And look at our house!\n"
+	.string "Isn't it gorgeous?\p"
+	.string "Yup, I think we really picked\n"
+	.string "a good spot!$"
+
+LittlerootTown_Text_LetsGoInside:
+	.string "You even get your own room, {PLAYER}!\p"
+	.string "You excited? Let's go inside, dear.$"
 
 LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"
