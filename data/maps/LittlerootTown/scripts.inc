@@ -1009,7 +1009,7 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	return
 
 LittlerootTown_Text_Greeting:
-	.string "MOM: {PLAYER}, we're here, honey!\p"
+	.string "Mom: {PLAYER}, we're here, honey!\p"
 	.string "Sorry to make you ride with our things\n"
 	.string "in the moving truck.\p"
 	.string "Hopefully the ride wasn't too bumpy!$"
@@ -1017,7 +1017,7 @@ LittlerootTown_Text_Greeting:
 LittlerootTown_Text_OurNewHome:
 	.string "Well, this is Littleroot Town, dear.\n"
 	.string "It's a pretty little place, isn't it?\p"
-	.string "It's a lot smaller than the city, that's\n"
+	.string "It's a lot smaller than Olivine, that's\n"
 	.string "for sure, but I think we'll fit right in!\p"
 	.string "It also helps that we're pretty close to\n"
 	.string "where your father works now.$"
@@ -1033,15 +1033,15 @@ LittlerootTown_Text_LetsGoInside:
 	.string "You excited? Let's go inside, dear.$"
 
 LittlerootTown_Text_WaitPlayer:
-	.string "MOM: Wait, {PLAYER}!$"
+	.string "Mom: Wait, {PLAYER}!$"
 
 LittlerootTown_Text_WearTheseRunningShoes:
-	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
+	.string "Mom: {PLAYER}! {PLAYER}! Did you\n"
 	.string "introduce yourself to PROF. BIRCH?\p"
-	.string "Oh! What an adorable POKéMON!\n"
+	.string "Oh! What an adorable Pokémon!\n"
 	.string "You got it from PROF. BIRCH. How nice!\p"
 	.string "You're your father's child, all right.\n"
-	.string "You look good together with POKéMON!\p"
+	.string "You look good together with Pokémon!\p"
 	.string "Here, honey! If you're going out on an\n"
 	.string "adventure, wear these RUNNING SHOES.\p"
 	.string "They'll put a zip in your step!$"
@@ -1051,7 +1051,7 @@ LittlerootTown_Text_SwitchShoesWithRunningShoes:
 	.string "RUNNING SHOES.$"
 
 LittlerootTown_Text_ExplainRunningShoes:
-	.string "MOM: {PLAYER}, those shoes came with\n"
+	.string "Mom: {PLAYER}, those shoes came with\n"
 	.string "instructions.\p"
 	.string "“Press the B Button while wearing these\n"
 	.string "RUNNING SHOES to run extra-fast!\p"
@@ -1062,7 +1062,7 @@ LittlerootTown_Text_ComeHomeIfAnythingHappens:
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "To think that you have your very own\n"
-	.string "POKéMON now…\l"
+	.string "Pokémon now…\l"
 	.string "Your father will be overjoyed.\p"
 	.string "…But please be careful.\n"
 	.string "If anything happens, you can come home.\p"
@@ -1070,7 +1070,7 @@ LittlerootTown_Text_ComeHomeIfAnythingHappens:
 
 LittlerootTown_Text_CanUsePCToStoreItems:
 	.string "If you use a PC, you can store items\n"
-	.string "and POKéMON.\p"
+	.string "and Pokémon.\p"
 	.string "The power of science is staggering!$"
 
 LittlerootTown_Text_BirchSpendsDaysInLab:
@@ -1083,18 +1083,18 @@ LittlerootTown_Text_BirchSpendsDaysInLab:
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
 	.string "Um, um, um!\p"
 	.string "If you go outside and go in the grass,\n"
-	.string "wild POKéMON will jump out!$"
+	.string "wild Pokémon will jump out!$"
 
 LittlerootTown_Text_DangerousIfYouDontHavePokemon:
 	.string "It's dangerous if you don't have\n"
-	.string "your own POKéMON.$"
+	.string "your own Pokémon.$"
 
 LittlerootTown_Text_CanYouGoSeeWhatsHappening:
 	.string "Um, hi!\p"
-	.string "There are scary POKéMON outside!\n"
+	.string "There are scary Pokémon outside!\n"
 	.string "I can hear their cries!\p"
 	.string "I want to go see what's going on,\n"
-	.string "but I don't have any POKéMON…\p"
+	.string "but I don't have any Pokémon…\p"
 	.string "Can you go see what's happening\n"
 	.string "for me?$"
 
@@ -1103,7 +1103,7 @@ LittlerootTown_Text_YouSavedBirch:
 	.string "I'm so glad!$"
 
 LittlerootTown_Text_GoodLuckCatchingPokemon:
-	.string "Are you going to catch POKéMON?\n"
+	.string "Are you going to catch Pokémon?\n"
 	.string "Good luck!$"
 
 LittlerootTown_Text_TownSign:
@@ -1111,7 +1111,7 @@ LittlerootTown_Text_TownSign:
 	.string "“A town that can't be shaded any hue.”$"
 
 LittlerootTown_Text_ProfBirchsLab:
-	.string "PROF. BIRCH'S POKéMON LAB$"
+	.string "PROF. BIRCH'S Pokémon LAB$"
 
 LittlerootTown_Text_PlayersHouse:
 	.string "{PLAYER}'s HOUSE$"

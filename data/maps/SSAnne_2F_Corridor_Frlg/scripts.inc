@@ -188,7 +188,7 @@ SSAnne_2F_Corridor_Text_RivalIntro::
 SSAnne_2F_Corridor_Text_RivalDefeat::
 	.string "Humph!\p"
 	.string "At least you're raising your\n"
-	.string "POKéMON!$"
+	.string "Pokémon!$"
 
 SSAnne_2F_Corridor_Text_RivalVictory::
 	.string "{PLAYER}..！\n"

@@ -4,6 +4,7 @@ PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet::
 
 PlayersHouse_1F_EventScript_EnterHouseMovingIn::
 	msgbox PlayersHouse_1F_Text_IsntItNiceInHere, MSGBOX_DEFAULT
+	closemessage
 	//applymovement VAR_0x8004, Common_Movement_FacePlayer
 	//waitmovement 0
 	call_if_eq VAR_0x8005, MALE, PlayersHouse_1F_EventScript_MomFacePlayerMovingInMale
@@ -124,14 +125,20 @@ PlayersHouse_2F_EventScript_SetWallClock::
 PlayersHouse_2F_Movement_MomEntersMale:
 	delay_8
 	walk_down
+	walk_down
+	walk_down
 	walk_in_place_faster_left
 	delay_16
 	delay_8
+	walk_left
 	walk_left
 	step_end
 
 PlayersHouse_2F_Movement_MomExitsMale:
 	walk_right
+	walk_right
+	walk_up
+	walk_up
 	walk_up
 	delay_8
 	step_end
@@ -139,14 +146,20 @@ PlayersHouse_2F_Movement_MomExitsMale:
 PlayersHouse_2F_Movement_MomEntersFemale:
 	delay_8
 	walk_down
+	walk_down
+	walk_down
 	walk_in_place_faster_right
 	delay_16
 	delay_8
+	walk_right
 	walk_right
 	step_end
 
 PlayersHouse_2F_Movement_MomExitsFemale:
 	walk_left
+	walk_left
+	walk_up
+	walk_up
 	walk_up
 	delay_8
 	step_end
@@ -230,6 +243,7 @@ PlayersHouse_1F_Movement_MomLookAtMoversMale:
 	walk_up
 	walk_left
 	walk_in_place_faster_down
+	delay_8
 	step_end
 
 PlayersHouse_1F_Movement_PlayerLookAtMoversMale:
@@ -346,7 +360,7 @@ PlayersHouse_1F_EventScript_Mom::
 	goto_if_set FLAG_RESCUED_BIRCH, PlayersHouse_1F_EventScript_MomHealsParty
 	goto_if_eq VAR_TEMP_1, 1, PlayersHouse_1F_EventScript_SeeYouHoney
 	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 7, PlayersHouse_1F_EventScript_DidYouMeetProfBirch
-	msgbox PlayersHouse_1F_Text_IsntItNiceInHere, MSGBOX_DEFAULT
+	msgbox PlayersHouse_1F_Text_ArentYouInterestedInRoom, MSGBOX_DEFAULT
 	release
 	end
 
@@ -711,4 +725,26 @@ PlayersHouse_1F_Movement_PlayerApproachTVForLatiFemale:
 
 EventScript_RunningShoesManual::
 	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
+	end
+
+PlayersHouse_2F_EventScript_Bed::
+	msgbox PlayersHouse_2F_Text_BedRest
+	closemessage
+	call Common_EventScript_OutOfCenterPartyHeal
+	goto_if_eq VAR_LITTLEROOT_INTRO_STATE, 5, PlayersHouse_2F_EventScript_BedAdvanceIntro
+	incrementgamestat GAME_STAT_RESTED_AT_HOME
+	releaseall
+	end
+
+PlayersHouse_2F_EventScript_BedAdvanceIntro::
+	delay 30
+	setvar VAR_LITTLEROOT_INTRO_STATE, 6
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, PlayersHouse_2F_EventScript_MomComesUpstairsMale
+	call_if_eq VAR_RESULT, FEMALE, PlayersHouse_2F_EventScript_MomComesUpstairsFemale
+	playse SE_EXIT
+	removeobject VAR_0x8008
+	releaseall
 	end

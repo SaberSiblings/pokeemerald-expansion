@@ -454,24 +454,24 @@ PalletTown_Text_OakDontGoOut::
 
 PalletTown_Text_OakGrassUnsafeNeedMon::
 	.string "OAK: It's unsafe!\n"
-	.string "Wild POKéMON live in tall grass!\p"
-	.string "You need your own POKéMON for\n"
+	.string "Wild Pokémon live in tall grass!\p"
+	.string "You need your own Pokémon for\n"
 	.string "your protection.\p"
 	.string "I know!\n"
 	.string "Here, come with me!$"
 
 PalletTown_Text_RaisingMonsToo::
-	.string "I'm raising POKéMON, too.\p"
+	.string "I'm raising Pokémon, too.\p"
 	.string "When they get strong, they can\n"
 	.string "protect me.$"
 
 PalletTown_Text_CanStoreItemsAndMonsInPC::
 	.string "Technology is incredible!\p"
 	.string "You can now store and recall items\n"
-	.string "and POKéMON as data via PC.$"
+	.string "and Pokémon as data via PC.$"
 
 PalletTown_Text_OakPokemonResearchLab::
-	.string "OAK POKéMON RESEARCH LAB$"
+	.string "OAK Pokémon RESEARCH LAB$"
 
 PalletTown_Text_PlayersHouse::
 	.string "{PLAYER}'s house$"

@@ -269,17 +269,29 @@ PlayersHouse_2F_EventScript_GameCube::
 	msgbox PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN
 	end
 
+LittlerootTown_BrendansHouse_2F_EventScript_Bed::
+	lockall
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, PlayersHouse_2F_EventScript_Bed
+	releaseall
+	end
+
 PlayersHouse_2F_Text_ClockIsStopped:
 	.string "The clock is stopped…\p"
 	.string "Better set it and start it!$"
 
+PlayersHouse_2F_Text_BedRest:
+	.string "It's your bed.\p"
+	.string "{PLAYER} took a quick nap...$"
+
 PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
-	.string "MOM: {PLAYER}, how do you like your\n"
-	.string "new room?\p"
-	.string "Good! Everything's put away neatly!\p"
+	.string "Mom: {PLAYER}, feeling better after\n"
+	.string "that nap?\p"
+	.string "Good! I went ahead and put away your\n"
+	.string "things while you were sleeping.\p"
 	.string "They finished moving everything in\n"
 	.string "downstairs, too.\p"
-	.string "POKéMON movers are so convenient!\p"
+	.string "Pokémon movers are so convenient!\p"
 	.string "Oh, you should make sure that\n"
 	.string "everything's all there on your desk.$"
 
@@ -298,4 +310,5 @@ Common_Text_LookCloserAtMap:
 PlayersHouse_2F_Text_ItsAGameCube:
 	.string "It's a Nintendo GameCube.\p"
 	.string "A Game Boy Advance is connected to\n"
-	.string "serve as the Controller.$"
+	.string "serve as the Controller.\p"
+	.string "Retro!$"

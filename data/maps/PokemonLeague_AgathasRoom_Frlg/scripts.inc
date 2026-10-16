@@ -99,7 +99,7 @@ PokemonLeague_AgathasRoom_Text_Intro::
 	.string "Now he just wants to fiddle with\n"
 	.string "his POKéDEX.\p"
 	.string "He's wrong.\n"
-	.string "POKéMON are for battling!\p"
+	.string "Pokémon are for battling!\p"
 	.string "{PLAYER}! I'll show you how a real\n"
 	.string "TRAINER battles!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
@@ -114,7 +114,7 @@ PokemonLeague_AgathasRoom_Text_RematchIntro::
 	.string "Now he just wants to fiddle with\n"
 	.string "his POKéDEX.\p"
 	.string "He's wrong.\n"
-	.string "POKéMON are for battling!\p"
+	.string "Pokémon are for battling!\p"
 	.string "{PLAYER}! I'll show you how a real\n"
 	.string "TRAINER battles!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
