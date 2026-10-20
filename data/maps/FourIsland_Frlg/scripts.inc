@@ -188,7 +188,7 @@ FourIsland_Text_RivalAlreadyGotEggBeSmellingYa::
 	.string "Heh, I bet you don't even know\n"
 	.string "about Pokémon EGGS.\p"
 	.string "You'll never fill your NATIONAL\n"
-	.string "POKéDEX that way.\p"
+	.string "Pokédex that way.\p"
 	.string "By the way, I saw someone we both\n"
 	.string "know on this island.\p"
 	.string "Why don't you go look around if\n"

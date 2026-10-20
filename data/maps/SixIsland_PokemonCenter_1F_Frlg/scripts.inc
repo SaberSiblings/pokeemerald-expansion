@@ -94,7 +94,7 @@ SixIsland_PokemonCenter_1F_Text_SomeMonsEvolveByTradingWithHeldItem::
 
 SixIsland_PokemonCenter_1F_Text_RivalImpossibleToGetAllMonsAroundHere::
 	.string "{RIVAL}: Hey, {PLAYER}!\n"
-	.string "How's your POKéDEX filling up?\p"
+	.string "How's your Pokédex filling up?\p"
 	.string "It looks like it's impossible to get\n"
 	.string "all the Pokémon by hanging around\l"
 	.string "just these parts.\p"

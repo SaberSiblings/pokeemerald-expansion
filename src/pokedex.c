@@ -686,17 +686,17 @@ static const u8 sText_UnkHeight[] = _("{CLEAR_TO 12}??'??”");
 static const u8 sText_UnkHeightMetric[] = _("???.? m");
 static const u8 sText_UnkWeight[] = _("????.? lbs.");
 static const u8 sText_UnkWeightMetric[] = _("???.? kg.");
-static const u8 sText_PokedexRegistration[] = _("POKéDEX registration completed.");
+static const u8 sText_PokedexRegistration[] = _("Pokédex registration completed.");
 static const u8 sText_HTHeight[] = _("HT");
 static const u8 sText_WTWeight[] = _("WT");
 static const u8 sText_SearchingPleaseWait[] = _("Searching…\nPlease wait.");
 static const u8 sText_SearchCompleted[] = _("Search completed.");
 static const u8 sText_NoMatchingPkmnWereFound[] = _("No matching Pokémon were found.");
 static const u8 sText_SearchForPkmnBasedOnParameters[] = _("Search for Pokémon based on\nselected parameters.");
-static const u8 sText_SwitchPokedexListings[] = _("Switch POKéDEX listings.");
-static const u8 sText_ReturnToPokedex[] = _("Return to the POKéDEX.");
-static const u8 sText_SelectPokedexMode[] = _("Select the POKéDEX mode.");
-static const u8 sText_SelectPokedexListingMode[] = _("Select the POKéDEX listing mode.");
+static const u8 sText_SwitchPokedexListings[] = _("Switch Pokédex listings.");
+static const u8 sText_ReturnToPokedex[] = _("Return to the Pokédex.");
+static const u8 sText_SelectPokedexMode[] = _("Select the Pokédex mode.");
+static const u8 sText_SelectPokedexListingMode[] = _("Select the Pokédex listing mode.");
 static const u8 sText_ListByFirstLetter[] = _("List by the first letter in the name.\nSpotted Pokémon only.");
 static const u8 sText_ListByBodyColor[] = _("List by body color.\nSpotted Pokémon only.");
 static const u8 sText_ListByType[] = _("List by type.\nOwned Pokémon only.");
@@ -1181,8 +1181,8 @@ static const u8 sSearchMovementMap_ShiftHoennDex[SEARCH_COUNT][4] =
 
 static const struct SearchOptionText sDexModeOptions[] =
 {
-    [DEX_MODE_HOENN]    = {COMPOUND_STRING("HOENN region's POKéDEX"),   COMPOUND_STRING("HOENN DEX")},
-    [DEX_MODE_NATIONAL] = {COMPOUND_STRING("National edition POKéDEX"), COMPOUND_STRING("NATIONAL DEX")},
+    [DEX_MODE_HOENN]    = {COMPOUND_STRING("HOENN region's Pokédex"),   COMPOUND_STRING("HOENN DEX")},
+    [DEX_MODE_NATIONAL] = {COMPOUND_STRING("National edition Pokédex"), COMPOUND_STRING("NATIONAL DEX")},
     {},
 };
 
@@ -1623,7 +1623,7 @@ static void Task_HandlePokedexStartMenuInput(u8 taskId)
                 CreateMonSpritesAtPos(sPokedexView->selectedPokemon, 0xE);
                 gMain.newKeys |= START_BUTTON;  //Exit menu
                 break;
-            case 3: //CLOSE POKéDEX
+            case 3: //CLOSE Pokédex
                 BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
                 gTasks[taskId].func = Task_ClosePokedex;
                 PlaySE(SE_PC_OFF);
@@ -1838,12 +1838,12 @@ static void Task_HandleSearchResultsStartMenuInput(u8 taskId)
                 CreateMonSpritesAtPos(sPokedexView->selectedPokemon, 0xE);
                 gMain.newKeys |= START_BUTTON;
                 break;
-            case 3: //BACK TO POKéDEX
+            case 3: //BACK TO Pokédex
                 BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
                 gTasks[taskId].func = Task_ReturnToPokedexFromSearchResults;
                 PlaySE(SE_TRUCK_DOOR);
                 break;
-            case 4: //CLOSE POKéDEX
+            case 4: //CLOSE Pokédex
                 BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
                 gTasks[taskId].func = Task_ClosePokedexFromSearchResultsStartMenu;
                 PlaySE(SE_PC_OFF);

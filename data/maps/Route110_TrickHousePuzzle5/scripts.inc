@@ -953,7 +953,7 @@ Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz1:
 Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz2:
 	.string "MECHADOLL 2 QUIZ.\p"
 	.string "Which of these Pokémon was chasing\n"
-	.string "PROF. BIRCH?$"
+	.string "Prof. Birch?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz3:
 	.string "MECHADOLL 2 QUIZ.\p"

@@ -111,7 +111,7 @@ LavenderTown_VolunteerPokemonHouse_Text_Psyduck::
 
 LavenderTown_VolunteerPokemonHouse_Text_IdLikeYouToHaveThis::
 	.string "MR. FUJI: {PLAYER}…\p"
-	.string "Your POKéDEX quest is one that\n"
+	.string "Your Pokédex quest is one that\n"
 	.string "requires strong dedication.\p"
 	.string "Without deep love for Pokémon,\n"
 	.string "your quest may fail.\p"

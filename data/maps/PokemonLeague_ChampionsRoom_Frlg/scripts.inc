@@ -230,7 +230,7 @@ PokemonLeague_ChampionsRoom_Text_Intro::
 	.string "you, {PLAYER}.\p"
 	.string "My rival should be strong to keep\n"
 	.string "me sharp.\p"
-	.string "While working on my POKéDEX, I\n"
+	.string "While working on my Pokédex, I\n"
 	.string "looked all over for Pokémon.\p"
 	.string "Not only that, I assembled teams\n"
 	.string "that would beat any Pokémon type.\p"
@@ -248,7 +248,7 @@ PokemonLeague_ChampionsRoom_Text_RematchIntro::
 	.string "Hahah, that is so great!\p"
 	.string "My rival should be strong to keep\n"
 	.string "me sharp.\p"
-	.string "While working on my POKéDEX, I\n"
+	.string "While working on my Pokédex, I\n"
 	.string "looked all over for Pokémon.\p"
 	.string "Not only that, I assembled teams\n"
 	.string "that would beat any Pokémon type.\p"
@@ -299,7 +299,7 @@ PokemonLeague_ChampionsRoom_Text_OakCongratulations::
 	.string "CHAMPION!\p"
 	.string "You've grown up so much since you\n"
 	.string "first left with {STR_VAR_1} to work\l"
-	.string "on the POKéDEX.\p"
+	.string "on the Pokédex.\p"
 	.string "{PLAYER}, you have come of age!$"
 
 PokemonLeague_ChampionsRoom_Text_OakImDisappointedRival::

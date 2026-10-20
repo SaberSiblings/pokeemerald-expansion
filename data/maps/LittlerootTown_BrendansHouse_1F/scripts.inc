@@ -370,7 +370,7 @@ PlayersHouse_1F_Text_Vigoroth2:
 	.string "Huggoh, uggo uggo…$"
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym:
-	.string "INTERVIEWER: …We brought you this\n"
+	.string "Interviewer: …We brought you this\n"
 	.string "report from in front of Petalburg Gym.$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
@@ -388,7 +388,7 @@ PlayersHouse_1F_Text_RunningShoesManual:
 	.string "the road running!”$"
 
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
-	.string "DAD: Hm?\p"
+	.string "Dad: Hm?\p"
 	.string "Hey, it's {PLAYER}!\p"
 	.string "It's been a while since I saw you,\n"
 	.string "but you look…stronger, somehow.\p"
@@ -399,7 +399,7 @@ PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
 	.string "MR. BRINEY.$"
 
 PlayersHouse_1F_Text_PortsInSlateportLilycove:
-	.string "DAD: Hm, a TICKET for a ferry?\p"
+	.string "Dad: Hm, a TICKET for a ferry?\p"
 	.string "If I recall, there are ferry ports in\n"
 	.string "SLATEPORT and LILYCOVE.$"
 
@@ -415,7 +415,7 @@ PlayersHouse_1F_Text_DadShouldStayLonger:
 	.string "He should relax and stay a little longer.$"
 
 PlayersHouse_1F_Text_IsThatABreakingStory:
-	.string "MOM: Is that a breaking news story?$"
+	.string "Mom: Is that a breaking news story?$"
 
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
 	.string "We bring you this emergency\n"
@@ -434,5 +434,5 @@ PlayersHouse_1F_Text_WhatColorDidTheySay:
 	.string "that Pokémon was?$"
 
 PlayersHouse_1F_Text_StillUnknownPokemon:
-	.string "MOM: Well, isn't that something!\n"
+	.string "Mom: Well, isn't that something!\n"
 	.string "There are still unknown Pokémon.$"

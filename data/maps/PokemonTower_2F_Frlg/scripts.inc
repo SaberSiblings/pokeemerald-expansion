@@ -114,7 +114,7 @@ PokemonTower_2F_Text_RivalDefeat::
 	.string "I took it easy on you, too!$"
 
 PokemonTower_2F_Text_RivalPostBattle::
-	.string "How's your POKéDEX coming?\n"
+	.string "How's your Pokédex coming?\n"
 	.string "I just caught a CUBONE!\p"
 	.string "I can't find the bigger MAROWAK.\n"
 	.string "Where could they be?\p"
