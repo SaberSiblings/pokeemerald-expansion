@@ -132,9 +132,15 @@ PlayersHouse_2F_Movement_MomEntersMale:
 	delay_8
 	walk_left
 	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 PlayersHouse_2F_Movement_MomExitsMale:
+	walk_right
+	walk_right
+	walk_right
 	walk_right
 	walk_right
 	walk_up
@@ -153,9 +159,15 @@ PlayersHouse_2F_Movement_MomEntersFemale:
 	delay_8
 	walk_right
 	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 PlayersHouse_2F_Movement_MomExitsFemale:
+	walk_left
+	walk_left
+	walk_left
 	walk_left
 	walk_left
 	walk_up
@@ -186,6 +198,8 @@ PlayersHouse_1F_EventScript_PetalburgGymReportMale::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
+	closemessage
+	call PlayersHouse_1F_EventScript_HeartReaction
 	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_1, 1
@@ -211,6 +225,8 @@ PlayersHouse_1F_EventScript_PetalburgGymReportFemale::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
+	closemessage
+	call PlayersHouse_1F_EventScript_HeartReaction
 	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_1, 1
@@ -227,6 +243,14 @@ PlayersHouse_1F_EventScript_MomNoticeGymBroadcast::
 	waitmovement 0
 	msgbox PlayersHouse_1F_Text_OhComeQuickly, MSGBOX_DEFAULT
 	closemessage
+	return
+
+PlayersHouse_1F_EventScript_HeartReaction::
+	playse SE_PIN
+	applymovement VAR_0x8005, Common_Movement_Heart
+	waitmovement 0
+	applymovement VAR_0x8005, Common_Movement_Delay48
+	waitmovement 0
 	return
 
 PlayersHouse_1F_EventScript_WatchGymBroadcast::

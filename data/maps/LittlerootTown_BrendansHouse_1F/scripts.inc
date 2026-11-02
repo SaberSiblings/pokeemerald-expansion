@@ -96,6 +96,9 @@ LittlerootTown_BrendansHouse_1F_EventScript_YoureNewNeighbor::
 	waitmovement 0
 	special GetRivalSonDaughterString
 	msgbox RivalsHouse_1F_Text_OhYoureTheNewNeighbor, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_RIVALS_HOUSE_1F_MOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomReturn
+	waitmovement 0
 	setflag FLAG_MET_RIVAL_MOM
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 2
 	releaseall
@@ -108,6 +111,16 @@ LittlerootTown_BrendansHouse_1F_Movement_RivalMomApproach:
 	walk_right
 	walk_right
 	walk_right
+	step_end
+
+LittlerootTown_BrendansHouse_1F_Movement_RivalMomReturn:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_in_place_right
 	step_end
 
 LittlerootTown_BrendansHouse_1F_EventScript_GoSeeRoom::
@@ -142,6 +155,12 @@ LittlerootTown_BrendansHouse_1F_EventScript_MeetRival::
 	delay 10
 	addobject LOCALID_RIVALS_HOUSE_1F_RIVAL
 	delay 30
+	applymovement LOCALID_RIVALS_HOUSE_1F_RIVAL, LittlerootTown_BrendansHouse_1F_Movement_RivalHome
+	waitmovement 0
+	msgbox RivalsHouse_1F_Text_RivalImHome, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_RIVALS_HOUSE_1F_RIVAL, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_RIVALS_HOUSE_1F_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -190,11 +209,15 @@ LittlerootTown_BrendansHouse_1F_EventScript_BrendanApproachPlayer2::
 	waitmovement 0
 	return
 
+LittlerootTown_BrendansHouse_1F_Movement_RivalHome:
+	walk_up
+	walk_in_place_faster_left
+	step_end
+
 LittlerootTown_BrendansHouse_1F_Movement_BrendanApproachPlayer0:
 	walk_in_place_faster_left
 	walk_left
 	walk_in_place_faster_up
-	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -203,14 +226,12 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanApproachPlayer0:
 LittlerootTown_BrendansHouse_1F_Movement_BrendanApproachPlayer1:
 	walk_up
 	walk_up
-	walk_up
 	step_end
 
 LittlerootTown_BrendansHouse_1F_Movement_BrendanApproachPlayer2:
 	walk_in_place_faster_right
 	walk_right
 	walk_in_place_faster_up
-	walk_up
 	walk_up
 	walk_up
 	walk_up

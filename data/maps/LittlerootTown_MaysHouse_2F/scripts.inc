@@ -64,6 +64,14 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMay::
 	waitmovement 0
 	delay 10
 	playbgm MUS_ENCOUNTER_MAY, TRUE
+	msgbox RivalsHouse_2F_Text_MayBall
+	closemessage
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
 	call_if_eq VAR_FACING, DIR_NORTH, LittlerootTown_MaysHouse_2F_EventScript_MeetMayNorth
 	call_if_eq VAR_FACING, DIR_SOUTH, LittlerootTown_MaysHouse_2F_EventScript_MeetMaySouth
 	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_MaysHouse_2F_EventScript_MeetMayWest
@@ -314,26 +322,28 @@ LittlerootTown_MaysHouse_2F_EventScript_Bed::
 	releaseall
 	end
 
+RivalsHouse_2F_Text_MayBall:
+	.string "Um… Please put\n"
+	.string "that down.$"
+
 RivalsHouse_2F_Text_MayWhoAreYou:
-	.string "Huh?\n"
-	.string "Who… Who are you?\p"
+	.string "Who are you?\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
-	.string "Oh, you're {PLAYER}{KUN}.\n"
-	.string "So your move was today.\p"
-	.string "Um… I'm MAY.\n"
-	.string "Glad to meet you!\p"
-	.string "I…\n"
-	.string "I have this dream of becoming friends\l"
+	.string "Oh, you're {PLAYER}{KUN}?\n"
+	.string "So you just moved in today…\p"
+	.string "Well, I'm May.\n"
+	.string "Nice to meet you!\p"
+	.string "I have this dream of becoming friends\n"
 	.string "with Pokémon all over the world.\p"
-	.string "I… I heard about you, {PLAYER}{KUN}, from\n"
+	.string "I heard about you, {PLAYER}{KUN}, from\n"
 	.string "my dad, Prof. Birch.\p"
 	.string "I was hoping that you would be nice,\n"
-	.string "{PLAYER}{KUN}, and that we could be friends.\p"
-	.string "Oh, this is silly, isn't it?\n"
-	.string "I… I've just met you, {PLAYER}{KUN}.\p"
-	.string "Eheheh…\p"
-	.string "Oh, no! I forgot!\p"
+	.string "and that we could be friends!\p"
+	.string "We could talk about Pokémon,\n"
+	.string "or maybe even battle sometime.\l"
+	.string "Wouldn't that be fun?\p"
+	.string "Oh, wait a sec! I forgot!\p"
 	.string "I was supposed to go help Dad catch\n"
 	.string "some wild Pokémon!\p"
 	.string "{PLAYER}{KUN}, I'll catch you later!$"
@@ -342,32 +352,38 @@ RivalsHouse_2F_Text_MayGettingReady:
 	.string "Pokémon fully restored!\n"
 	.string "Items ready, and…$"
 
+RivalsHouse_2F_Text_BrendanBall:
+	.string "Hey! Let go\n"
+	.string "of that!$"
+
 RivalsHouse_2F_Text_BrendanWhoAreYou:
-	.string "Hey!\n"
-	.string "You…\p"
 	.string "Who are you?\p"
-	.string "Oh, you're {PLAYER}, aren't you?\n"
-	.string "Moved in next door, right?\p"
-	.string "I didn't know that you're a girl.\p"
-	.string "Dad, Prof. Birch, said that our new\n"
-	.string "next-door neighbor is a GYM LEADER's\l"
-	.string "kid, so I assumed you'd be a guy.\p"
-	.string "My name's BRENDAN.\n"
-	.string "So, hi, neighbor!\p"
-	.string "Huh? Hey, {PLAYER}, don't you have\n"
-	.string "a Pokémon?\p"
-	.string "Do you want me to go catch you one?\p"
-	.string "Aw, darn, I forgot…\p"
-	.string "I'm supposed to go help my dad catch\n"
+	.string "… … … … … … … …\n"
+	.string "… … … … … … … …\p"
+	.string "Oh, you're {PLAYER}{KUN}?\n"
+	.string "You just moved in today, huh?\p"
+	.string "Well, I'm Brendan.\n"
+	.string "Glad to meet you!\p"
+	.string "I have this dream of becoming friends\n"
+	.string "with Pokémon all over the world.\p"
+	.string "I heard about you, {PLAYER}{KUN}, from\n"
+	.string "my dad, Prof. Birch.\p"
+	.string "I was hoping that you would be cool,\n"
+	.string "and that we could be friends!\p"
+	.string "We could talk about Pokémon,\n"
+	.string "or maybe even battle sometime.\l"
+	.string "Wouldn't that be awesome?\p"
+	.string "Aw, shoot, I forgot!\p"
+	.string "I'm supposed to go help Dad catch\n"
 	.string "some wild Pokémon.\p"
-	.string "Some other time, okay?$"
+	.string "{PLAYER}{KUN}, talk later, okay?$"
 
 RivalsHouse_2F_Text_BrendanGettingReady:
 	.string "Pokémon fully restored…\n"
 	.string "Items all packed, and…$"
 
 RivalsHouse_2F_Text_ItsRivalsPokeBall:
-	.string "It's {RIVAL}'s POKé BALL!\p"
+	.string "It's {RIVAL}'s Poké Ball!\p"
 	.string "Better leave it right where it is.$"
 
 RivalsHouse_2F_Text_MayJustCheckingMyPokedex:

@@ -95,6 +95,9 @@ LittlerootTown_MaysHouse_1F_EventScript_YoureNewNeighbor::
 	waitmovement 0
 	special GetRivalSonDaughterString
 	msgbox RivalsHouse_1F_Text_OhYoureTheNewNeighbor, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_RIVALS_HOUSE_1F_MOM, LittlerootTown_MaysHouse_1F_Movement_RivalMomReturn
+	waitmovement 0
 	setflag FLAG_MET_RIVAL_MOM
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2
 	releaseall
@@ -109,6 +112,16 @@ LittlerootTown_MaysHouse_1F_Movement_RivalMomApproach:
 	walk_left
 	step_end
 
+LittlerootTown_MaysHouse_1F_Movement_RivalMomReturn:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_in_place_left
+	step_end
+
 RivalsHouse_1F_EventScript_RivalMom::
 	lock
 	faceplayer
@@ -117,6 +130,12 @@ RivalsHouse_1F_EventScript_RivalMom::
 	goto_if_eq VAR_LITTLEROOT_RIVAL_STATE, 3, RivalsHouse_1F_EventScript_RivalTooBusy
 	special GetRivalSonDaughterString
 	msgbox RivalsHouse_1F_Text_LikeChildLikeFather, MSGBOX_DEFAULT
+	closemessage
+	playse SE_PIN
+	applymovement LOCALID_RIVALS_HOUSE_1F_MOM, Common_Movement_Heart
+	waitmovement 0
+	applymovement LOCALID_RIVALS_HOUSE_1F_MOM, Common_Movement_Delay48
+	waitmovement 0
 	release
 	end
 
@@ -175,6 +194,12 @@ LittlerootTown_MaysHouse_1F_EventScript_MeetRival::
 	delay 10
 	addobject LOCALID_RIVALS_HOUSE_1F_RIVAL
 	delay 30
+	applymovement LOCALID_RIVALS_HOUSE_1F_RIVAL, LittlerootTown_MaysHouse_1F_Movement_RivalHome
+	waitmovement 0
+	msgbox RivalsHouse_1F_Text_RivalImHome, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_RIVALS_HOUSE_1F_RIVAL, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_RIVALS_HOUSE_1F_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
@@ -223,11 +248,15 @@ LittlerootTown_MaysHouse_1F_EventScript_MayApproachPlayer2::
 	waitmovement 0
 	return
 
+LittlerootTown_MaysHouse_1F_Movement_RivalHome:
+	walk_up
+	walk_in_place_faster_right
+	step_end
+
 LittlerootTown_MaysHouse_1F_Movement_MayApproachPlayer0:
 	walk_in_place_faster_left
 	walk_left
 	walk_in_place_faster_up
-	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -236,14 +265,12 @@ LittlerootTown_MaysHouse_1F_Movement_MayApproachPlayer0:
 LittlerootTown_MaysHouse_1F_Movement_MayApproachPlayer1:
 	walk_up
 	walk_up
-	walk_up
 	step_end
 
 LittlerootTown_MaysHouse_1F_Movement_MayApproachPlayer2:
 	walk_in_place_faster_right
 	walk_right
 	walk_in_place_faster_up
-	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -316,36 +343,47 @@ LittlerootTown_MaysHouse_1F_Movement_MayGoUpstairs2:
 	walk_up
 	step_end
 
+RivalsHouse_1F_Text_RivalImHome:
+	.string "Mom, I'm home!\n"
+	.string "Have you seen Dad?$"
+
 RivalsHouse_1F_Text_OhYoureTheNewNeighbor:
-	.string "Hello, little one. Who might you be?\p"
+	.string "Oh? Hello, little one.\n"
+	.string "Who might you be?\p"
 	.string "… … … … … … … … …\n"
 	.string "… … … … … … … … …\p"
-	.string "Oh, you're {PLAYER}{KUN}, our new next-door\n"
-	.string "neighbor! Hi!\p"
+	.string "Oh, you're {PLAYER}{KUN}, our new\n"
+	.string "next-door neighbor! Hi!\p"
+	.string "My husband, the professor,\n"
+	.string "mentioned you'd be coming over,\l"
+	.string "but he isn't home.\p"
 	.string "We have a {STR_VAR_1} about the same\n"
 	.string "age as you.\p"
-	.string "Our {STR_VAR_1} was excited about making\n"
+	.string "They were so excited about making\n"
 	.string "a new friend.\p"
-	.string "Our {STR_VAR_1} is upstairs, I think.$"
+	.string "I don't think they're home either, but\n"
+	.string "you can wait in their room if you want.$"
 
 RivalsHouse_1F_Text_LikeChildLikeFather:
 	.string "Like child, like father.\p"
 	.string "My husband is as wild about Pokémon\n"
-	.string "as our child.\p"
-	.string "If he's not at his LAB, he's likely\n"
-	.string "scrabbling about in grassy places.$"
+	.string "as our kid.\p"
+	.string "If he's not at his lab, he's likely\n"
+	.string "scrabbling about in the grass.\p"
+	.string "But that's part of why I love him!$"
 
 RivalsHouse_1F_Text_TooBusyToNoticeVisit:
 	.string "That {RIVAL}!\p"
-	.string "I guess our child is too busy with\n"
-	.string "Pokémon to notice that you came\l"
-	.string "to visit, {PLAYER}{KUN}.$"
+	.string "Sorry, {PLAYER}{KUN}. Our kid gets\n"
+	.string "pretty distracted when they start\l"
+	.string "thinking about Pokémon.\p"
+	.string "Runs in the family!$"
 
 RivalsHouse_1F_Text_WentOutToRoute103:
-	.string "Oh, {RIVAL} went out to ROUTE 103\n"
+	.string "Oh, {RIVAL} went out to Route 103\n"
 	.string "just a little while ago.\p"
-	.string "Like father, like child.\n"
-	.string "{RIVAL} can't stay quietly at home.$"
+	.string "Like father, like child, right?\n"
+	.string "Can't sit still, either of them.$"
 
 RivalsHouse_1F_Text_ShouldGoHomeEverySoOften:
 	.string "I think it's wonderful for people to\n"
@@ -356,48 +394,50 @@ RivalsHouse_1F_Text_ShouldGoHomeEverySoOften:
 	.string "worries about you, {PLAYER}{KUN}.$"
 
 RivalsHouse_1F_Text_MayWhoAreYou:
-	.string "Huh?\n"
-	.string "Who… Who are you?\p"
+	.string "Um, hello?\n"
+	.string "Who are you?\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
-	.string "Oh, you're {PLAYER}{KUN}.\n"
-	.string "So your move was today.\p"
-	.string "Um… I'm MAY.\n"
-	.string "Glad to meet you!\p"
-	.string "I…\n"
-	.string "I have this dream of becoming friends\l"
+	.string "Oh, you're {PLAYER}{KUN}?\n"
+	.string "So you just moved in today…\p"
+	.string "Well, I'm May.\n"
+	.string "Nice to meet you!\p"
+	.string "I have this dream of becoming friends\n"
 	.string "with Pokémon all over the world.\p"
-	.string "I… I heard about you, {PLAYER}{KUN}, from\n"
+	.string "I heard about you, {PLAYER}{KUN}, from\n"
 	.string "my dad, Prof. Birch.\p"
 	.string "I was hoping that you would be nice,\n"
-	.string "{PLAYER}{KUN}, and that we could be friends.\p"
-	.string "Oh, this is silly, isn't it?\n"
-	.string "I… I've just met you, {PLAYER}{KUN}.\p"
-	.string "Eheheh…\p"
-	.string "Oh, no! I forgot!\p"
+	.string "and that we could be friends!\p"
+	.string "We could talk about Pokémon,\n"
+	.string "or maybe even battle sometime.\l"
+	.string "Wouldn't that be fun?\p"
+	.string "Oh, wait a sec! I forgot!\p"
 	.string "I was supposed to go help Dad catch\n"
 	.string "some wild Pokémon!\p"
 	.string "{PLAYER}{KUN}, I'll catch you later!$"
 
 RivalsHouse_1F_Text_BrendanWhoAreYou:
-	.string "Hey!\n"
-	.string "You…\p"
+	.string "Hey there.\n"
 	.string "Who are you?\p"
-	.string "Oh, you're {PLAYER}, aren't you?\n"
-	.string "Moved in next door, right?\p"
-	.string "I didn't know that you're a girl.\p"
-	.string "Dad, Prof. Birch, said that our new\n"
-	.string "next-door neighbor is a GYM LEADER's\l"
-	.string "kid, so I assumed you'd be a guy.\p"
-	.string "My name's BRENDAN.\n"
-	.string "So, hi, neighbor!\p"
-	.string "Huh? Hey, {PLAYER}, don't you have\n"
-	.string "a Pokémon?\p"
-	.string "Do you want me to go catch you one?\p"
-	.string "Aw, darn, I forgot…\p"
-	.string "I'm supposed to go help my dad catch\n"
+	.string "… … … … … … … …\n"
+	.string "… … … … … … … …\p"
+	.string "Oh, you're {PLAYER}{KUN}?\n"
+	.string "You just moved in today, huh?\p"
+	.string "Well, I'm Brendan.\n"
+	.string "Glad to meet you!\p"
+	.string "I have this dream of becoming friends\n"
+	.string "with Pokémon all over the world.\p"
+	.string "I heard about you, {PLAYER}{KUN}, from\n"
+	.string "my dad, Prof. Birch.\p"
+	.string "I was hoping that you would be cool,\n"
+	.string "and that we could be friends!\p"
+	.string "We could talk about Pokémon,\n"
+	.string "or maybe even battle sometime.\l"
+	.string "Wouldn't that be awesome?\p"
+	.string "Aw, shoot, I forgot!\p"
+	.string "I'm supposed to go help Dad catch\n"
 	.string "some wild Pokémon.\p"
-	.string "Some other time, okay?$"
+	.string "{PLAYER}{KUN}, talk later, okay?$"
 
 RivalsHouse_1F_Text_DoYouHavePokemon:
 	.string "Hi, neighbor!\p"
