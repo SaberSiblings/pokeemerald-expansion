@@ -52,12 +52,13 @@ static void SpriteCB_StarterPokemon(struct Sprite *sprite);
 static u16 sStarterLabelWindowId;
 
 const u16 gBirchBagGrass_Pal[] = INCGFX_U16("graphics/starter_choose/tiles.png", ".gbapal");
-static const u16 sPokeballSelection_Pal[] = INCGFX_U16("graphics/starter_choose/pokeball_selection.png", ".gbapal");
+static const u16 sPokeballSelection_Pal[] = INCGFX_U16("graphics/starter_choose/premier_selection.png", ".gbapal");
 static const u16 sStarterCircle_Pal[] = INCGFX_U16("graphics/starter_choose/starter_circle.png", ".gbapal");
 const u32 gBirchBagTilemap[] = INCGFX_U32("graphics/starter_choose/birch_bag.bin", ".smolTM");
 const u32 gBirchGrassTilemap[] = INCGFX_U32("graphics/starter_choose/birch_grass.bin", ".smolTM");
 const u32 gBirchBagGrass_Gfx[] = INCGFX_U32("graphics/starter_choose/tiles.png", ".4bpp.smol");
 const u32 gPokeballSelection_Gfx[] = INCGFX_U32("graphics/starter_choose/pokeball_selection.png", ".4bpp.smol");
+const u32 sPremierSelection_Gfx[] = INCGFX_U32("graphics/starter_choose/premier_selection.png", ".4bpp.smol");
 static const u32 sStarterCircle_Gfx[] = INCGFX_U32("graphics/starter_choose/starter_circle.png", ".4bpp.smol");
 
 static const struct WindowTemplate sWindowTemplates[] =
@@ -288,7 +289,7 @@ static const union AffineAnimCmd *const sAffineAnims_StarterCircle[] = {sAffineA
 static const struct CompressedSpriteSheet sSpriteSheet_PokeballSelect[] =
 {
     {
-        .data = gPokeballSelection_Gfx,
+        .data = sPremierSelection_Gfx,
         .size = 0x0800,
         .tag = TAG_POKEBALL_SELECT
     },

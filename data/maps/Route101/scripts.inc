@@ -229,6 +229,14 @@ Route101_EventScript_BirchsBag::
 	applymovement LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchApproachPlayer
 	waitmovement 0
 	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
+	closemessage
+	playse SE_PIN
+	applymovement LOCAL_ID_ROUTE101_BIRCH, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCAL_ID_ROUTE101_BIRCH, Common_Movement_Delay48
+	waitmovement 0
+	msgbox Route101_Text_NewKid, MSGBOX_DEFAULT
+	closemessage
 	special HealPlayerParty
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
@@ -257,40 +265,52 @@ Route101_Movement_BirchApproachPlayer:
 	step_end
 
 Route101_Text_HelpMe:
-	.string "H-help me!$"
+	.string "Someone! Help me!$"
 
 Route101_Text_PleaseHelp:
 	.string "Hello! You over there!\n"
-	.string "Please! Help!\p"
-	.string "In my BAG!\n"
-	.string "There's a POKé BALL!$"
+	.string "Please! Help me!\p"
+	.string "Quick! In my bag!\n"
+	.string "Grab a Poké ball!$"
 
 Route101_Text_DontLeaveMe:
-	.string "Wh-Where are you going?!\n"
+	.string "Where are you going?!\n"
 	.string "Don't leave me like this!$"
 
 Route101_Text_YouSavedMe:
 	.string "Prof. Birch: Whew…\p"
 	.string "I was in the tall grass studying wild\n"
 	.string "Pokémon when I was jumped.\p"
-	.string "You saved me.\n"
+	.string "You sure saved me.\n"
 	.string "Thanks a lot!\p"
-	.string "Oh?\p"
-	.string "Hi, you're {PLAYER}{KUN}!\p"
-	.string "This is not the place to chat, so come\n"
-	.string "by my Pokémon LAB later, okay?$"
+	.string "Oh? You look familiar…\$"
+
+Route101_Text_NewKid:
+	.string "Wait, you're Norman's kid, right?\n"
+	.string "You're {PLAYER}{KUN}, the new kid!\l"
+	.string "You just moved in next door!\p"
+	.string "Ha ha, of all the people to get\n"
+	.string "rescued by!\p"
+	.string "This isn't the place to chat, but swing\n"
+	.string "by my Pokémon lab later, okay? I'd like\l"
+	.string "to thank you properly!$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If Pokémon get tired, take them to\n"
-	.string "a Pokémon CENTER.\p"
-	.string "There's a Pokémon CENTER in OLDALE\n"
-	.string "TOWN right close by.$"
+	.string "Pokémon Centers heal your Pokémon when\n"
+	.string "they run out of energy.\p"
+	.string "They even do it for free!\p"
+	.string "Of course, the trade-off is that\n"
+	.string "our taxes are sky high.\p"
+	.string "But I'm a kid! I don't have\n"
+	.string "a taxable income! Yippee!$"
 
 Route101_Text_WildPokemonInTallGrass:
 	.string "Wild Pokémon will jump out at you in\n"
 	.string "tall grass.\p"
-	.string "If you want to catch Pokémon, you have\n"
-	.string "to go into the tall grass and search.$"
+	.string "You should stay out of it if\n"
+	.string "you're not looking for a battle.\p"
+	.string "I'd pay for repels, but have you\n"
+	.string "seen our tax rate? Sheesh."
 
 Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
