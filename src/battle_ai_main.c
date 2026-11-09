@@ -1323,8 +1323,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
 
     // Don't use moves that miss if a faster foe is predicted to enter a semi-invulnerable state this turn.
     if (!IsSemiInvulnerable(battlerDef, CHECK_ALL)
-     && predictedMove != MOVE_NONE
-     && predictedMove != MOVE_UNAVAILABLE
+     && IsMoveValid(predictedMove)
      && (GetMoveEffect(predictedMove) == EFFECT_SEMI_INVULNERABLE || GetMoveEffect(predictedMove) == EFFECT_SKY_DROP)
      && AI_IsSlower(battlerAtk, battlerDef, move, predictedMove, CONSIDER_PRIORITY)
      && moveEffect != EFFECT_SEMI_INVULNERABLE
@@ -2381,7 +2380,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
 
             if (decreased)
                 break;
-            if (incomingMove != MOVE_NONE && incomingMove != MOVE_UNAVAILABLE)
+            if (IsMoveValid(incomingMove))
             {
                 if (MoveIgnoresProtect(incomingMove))
                 {
@@ -2861,7 +2860,7 @@ static s32 AI_CheckBadMove(enum BattlerId battlerAtk, enum BattlerId battlerDef,
              || IsMoveInstructBanned(instructedMove)
              || MoveHasAdditionalEffectSelf(instructedMove, MOVE_EFFECT_RECHARGE)
              || IsZMove(instructedMove)
-             || (gLockedMoves[battlerDef] != MOVE_NONE && gLockedMoves[battlerDef] != MOVE_UNAVAILABLE)
+             || IsMoveValid(gLockedMoves[battlerDef])
              || gBattleMons[battlerDef].volatiles.multipleTurns
              || PartnerMoveIsSameAsAttacker(GetPartnerBattler(battlerAtk), battlerDef, move, aiData->partnerMove))
             {
@@ -5335,19 +5334,19 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
     }
     case EFFECT_STEEL_ROLLER:
         {
-            u32 terrain = gFieldTimers.terrain;
-            if (ShouldClearFieldStatus(battlerAtk, terrain))
+            enum BattleTerrain terrain = gFieldTimers.terrain;
+            if (ShouldClearTerrain(battlerAtk, terrain))
                 ADJUST_SCORE(GOOD_EFFECT);
-            if (ShouldSetFieldStatus(battlerDef, terrain))
+            if (ShouldSetTerrain(battlerDef, terrain))
                 ADJUST_SCORE(DECENT_EFFECT);
         }
         break;
     case EFFECT_ICE_SPINNER:
         {
-            u32 terrain = gFieldTimers.terrain;
-            if (ShouldClearFieldStatus(battlerAtk, terrain))
+            enum BattleTerrain terrain = gFieldTimers.terrain;
+            if (ShouldClearTerrain(battlerAtk, terrain))
                 ADJUST_SCORE(GOOD_EFFECT);
-            if (ShouldSetFieldStatus(battlerDef, terrain))
+            if (ShouldSetTerrain(battlerDef, terrain))
                 ADJUST_SCORE(DECENT_EFFECT);
         }
         break;
@@ -5921,7 +5920,7 @@ static s32 AI_CalcAdditionalEffectScore(enum BattlerId battlerAtk, enum BattlerI
                     break;
                 }
                 if (ShouldSetTerrain(battlerAtk, B_TERRAIN_MISTY)
-                 || ShouldClearTerrain(battlerAtk, gFieldTimers.terrain != B_TERRAIN_NONE))
+                 || ShouldClearTerrain(battlerAtk, gFieldTimers.terrain))
                     ADJUST_SCORE(DECENT_EFFECT);
                 break;
             case MOVE_EFFECT_GRASSY_TERRAIN:
@@ -5931,7 +5930,7 @@ static s32 AI_CalcAdditionalEffectScore(enum BattlerId battlerAtk, enum BattlerI
                     break;
                 }
                 if (ShouldSetTerrain(battlerAtk, B_TERRAIN_GRASSY)
-                 || ShouldClearTerrain(battlerAtk, gFieldTimers.terrain != B_TERRAIN_NONE))
+                 || ShouldClearTerrain(battlerAtk, gFieldTimers.terrain))
                     ADJUST_SCORE(DECENT_EFFECT);
                 break;
             case MOVE_EFFECT_ELECTRIC_TERRAIN:
@@ -5941,7 +5940,7 @@ static s32 AI_CalcAdditionalEffectScore(enum BattlerId battlerAtk, enum BattlerI
                     break;
                 }
                 if (ShouldSetTerrain(battlerAtk, B_TERRAIN_ELECTRIC)
-                 || ShouldClearTerrain(battlerAtk, gFieldTimers.terrain != B_TERRAIN_NONE))
+                 || ShouldClearTerrain(battlerAtk, gFieldTimers.terrain))
                     ADJUST_SCORE(DECENT_EFFECT);
                 break;
             case MOVE_EFFECT_PSYCHIC_TERRAIN:
@@ -5951,7 +5950,7 @@ static s32 AI_CalcAdditionalEffectScore(enum BattlerId battlerAtk, enum BattlerI
                     break;
                 }
                 if (ShouldSetTerrain(battlerAtk, B_TERRAIN_PSYCHIC)
-                 || ShouldClearTerrain(battlerAtk, gFieldTimers.terrain != B_TERRAIN_NONE))
+                 || ShouldClearTerrain(battlerAtk, gFieldTimers.terrain))
                     ADJUST_SCORE(DECENT_EFFECT);
                 break;
             case MOVE_EFFECT_GRAVITY:
