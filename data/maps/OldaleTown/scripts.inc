@@ -71,7 +71,7 @@ OldaleTown_EventScript_GoToMartEast::
 
 OldaleTown_EventScript_ExplainPokemonMart::
 	msgbox OldaleTown_Text_ThisIsAPokemonMart, MSGBOX_DEFAULT
-	giveitem ITEM_POTION
+	giveitem ITEM_POTION, 5
 	goto_if_eq VAR_RESULT, FALSE, OldaleTown_EventScript_BagIsFull
 	msgbox OldaleTown_Text_PotionExplanation, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_POTION_OLDALE
@@ -200,6 +200,11 @@ OldaleTown_EventScript_FootprintsMan::
 
 OldaleTown_EventScript_BlockedPath::
 	lockall
+	playse SE_PIN
+	applymovement LOCALID_FOOTPRINTS_MAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_FOOTPRINTS_MAN, Common_Movement_Delay48
+	waitmovement 0
 	applymovement LOCALID_PLAYER, OldaleTown_Movement_PlayerStepBack
 	applymovement LOCALID_FOOTPRINTS_MAN, OldaleTown_Movement_BackUp
 	waitmovement 0
@@ -340,30 +345,34 @@ OldaleTown_Movement_ReturnToOriginalPosition:
 	step_end
 
 OldaleTown_Text_SavingMyProgress:
-	.string "I want to take a rest, so I'm saving my\n"
-	.string "progress.$"
+	.string "Man, my legs are sore.\n"
+	.string "If I was in a video game,\l"
+	.string "this would be a good save point.\p"
+	.string "But that's silly, isn't it?\n"
+	.string "You can't save in real life!$"
 
 OldaleTown_Text_IWorkAtPokemonMart:
 	.string "Hi!\n"
-	.string "I work at a Pokémon MART.\p"
+	.string "I work at a Pokémon Mart.\p"
 	.string "Can I get you to come with me?$"
 
 OldaleTown_Text_ThisIsAPokemonMart:
-	.string "This is a Pokémon MART.\n"
+	.string "This is a Pokémon Mart.\n"
 	.string "Just look for our blue roof.\p"
 	.string "We sell a variety of goods including\n"
-	.string "POKé BALLS for catching Pokémon.\p"
-	.string "Here, I'd like you to have this as\n"
-	.string "a promotional item.$"
+	.string "Poké balls for catching Pokémon,\l"
+	.string "though we're out of those at the moment.\p"
+	.string "Here, I'd like you to have these, as\n"
+	.string "a free sample.$"
 
 OldaleTown_Text_PotionExplanation:
-	.string "A POTION can be used anytime, so it's\n"
-	.string "even more useful than a Pokémon CENTER\l"
+	.string "A potion can be used anytime, so it's\n"
+	.string "even more useful than a Pokémon Center\l"
 	.string "in certain situations.$"
 
 OldaleTown_Text_WaitDontComeInHere:
 	.string "Aaaaah! Wait!\n"
-	.string "Please don't come in here.\p"
+	.string "Step back! Back!\p"
 	.string "I just discovered the footprints of\n"
 	.string "a rare Pokémon!\p"
 	.string "Wait until I finish sketching\n"
@@ -377,8 +386,8 @@ OldaleTown_Text_DiscoveredFootprints:
 
 OldaleTown_Text_FinishedSketchingFootprints:
 	.string "I finished sketching the footprints of\n"
-	.string "a rare Pokémon.\p"
-	.string "But it turns out they were only my\n"
+	.string "a rare Pokémon, or so I thought.\p"
+	.string "It turns out they were only my\n"
 	.string "own footprints…$"
 
 OldaleTown_Text_MayLetsGoBack:

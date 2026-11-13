@@ -525,7 +525,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_MayGotPokedexTooTakeThese, MSGBOX_DEFAULT
-	giveitem ITEM_POKE_BALL, 5
+	giveitem ITEM_POKE_BALL, 15
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_MayNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 0
@@ -533,7 +533,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BrendanGotPokedexTooTakeThese, MSGBOX_DEFAULT
-	giveitem ITEM_POKE_BALL, 5
+	giveitem ITEM_POKE_BALL, 15
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCoolPokemonWithPokeBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 1
@@ -664,7 +664,8 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork:
 	.string "It is to study things in the natural\n"
 	.string "environment, like fields and mountains,\l"
 	.string "instead of a laboratory.\p"
-	.string "The professor isn't one for doing desk work.\n"
+	.string "The professor isn't one for doing\n"
+	.string "desk work.\p"
 	.string "He's the type of person who would\l"
 	.string "rather go outside and experience\l"
 	.string "things than read about them here.$"
@@ -687,12 +688,12 @@ LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon:
 	.string "your father.\p"
 	.string "You know, I vividly remember him telling\n"
 	.string "me that you've never had a Pokémon,\l"
-	.string "much less a battle with one."
+	.string "much less a battle with one.\p"
 	.string "It didn't look like it!\n"
 	.string "You're a natural!\p"
 	.string "It's like battling's in your blood\n"
 	.string "or something!\p"
-	.string "That being said, as thanks for rescuing me,\n"
+	.string "With that, as thanks for rescuing me,\n"
 	.string "I'd like you to have the Pokémon you\l"
 	.string "used earlier.\p"
 	.string "{PLAYER} received the {STR_VAR_1}!$"
@@ -702,23 +703,29 @@ LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon:
 	.string "give a nickname to that {STR_VAR_1}?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival:
-	.string "Prof. Birch: If you work at Pokémon\n"
-	.string "and gain experience, I think you'll make\l"
-	.string "an extremely good TRAINER.\p"
-	.string "My kid, {RIVAL}, is also studying\n"
-	.string "Pokémon while helping me out.\p"
-	.string "{PLAYER}{KUN}, don't you think it might be\n"
-	.string "a good idea to go see {RIVAL}?$"
+	.string "Prof. Birch: {PLAYER}, I seriously\n"
+	.string "think you have the potential to be\l"
+	.string "an extremely good trainer.\p"
+	.string "My kid, {RIVAL}, has been studying\n"
+	.string "Pokémon while helping me out\l"
+	.string "in the research department.\p"
+	.string "But just like you, they're new to\n"
+	.string "the whole battling scene.\p"
+	.string "I think a little rivalry would\n"
+	.string "really benefit the both of you.\p"
+	.string "Why don't you go find {RIVAL}\n"
+	.string "and get them to battle you?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou:
 	.string "Prof. Birch: Great!\n"
 	.string "{RIVAL} should be happy, too.\p"
-	.string "Get {RIVAL} to teach you what it\n"
-	.string "means to be a TRAINER.$"
+	.string "I think you could both use the\n"
+	.string "friendly competition to push each\l"
+	.string "other into being better trainers.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_DontBeThatWay:
 	.string "Prof. Birch: Oh, don't be that way.\n"
-	.string "You should go meet my kid.$"
+	.string "At least one battle!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BirchRivalGoneHome:
 	.string "Prof. Birch: {RIVAL}?\n"

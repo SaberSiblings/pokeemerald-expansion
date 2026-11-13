@@ -76,7 +76,7 @@ struct ItemInfo
     const u8 *name;
     const u8 *pluralName;
     u8 holdEffect;
-    u8 holdEffectParam;
+    u16 holdEffectParam;
     u8 importance:2;
     u8 notConsumed:1;
     enum Pocket pocket:5;

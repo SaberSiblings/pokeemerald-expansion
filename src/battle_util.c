@@ -7530,7 +7530,7 @@ static inline uq4_12_t GetDefenderAbilitiesModifier(struct DamageContext *ctx)
     case ABILITY_PRISM_ARMOR:
         if (ctx->typeEffectivenessModifier >= UQ_4_12(2.0))
         {
-            modifier = UQ_4_12(0.75);
+            modifier = UQ_4_12(0.625);
             recordAbility = TRUE;
         }
         break;

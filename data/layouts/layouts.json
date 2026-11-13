@@ -664,7 +664,7 @@
     {
       "id": "LAYOUT_POKEMON_CENTER_1F",
       "name": "PokemonCenter_1F_Layout",
-      "width": 14,
+      "width": 22,
       "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonCenter",
@@ -689,7 +689,7 @@
       "width": 11,
       "height": 8,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Shop",
+      "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Mart/border.bin",
       "blockdata_filepath": "data/layouts/Mart/map.bin",
       "layout_version": "emerald"

@@ -1364,7 +1364,7 @@ gText_PokemartSign::
 
 gText_PokemonCenterSign::
 	.string "“Rejuvenate your tired partners!”\n"
-	.string "Pokémon CENTER$"
+	.string "Pokémon Center$"
 
 gText_MomOrDadMightLikeThisProgram::
 	.string "{STR_VAR_1} might like this program.\n"

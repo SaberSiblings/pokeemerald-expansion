@@ -66,12 +66,13 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = BALL_POKE,
         .iconPic = gItemIcon_PokeBall,
         .iconPalette = gItemIconPalette_PokeBall,
+        .shopCriteriaFunc = ShopCriteria_HasPokedex,
     },
 
     [ITEM_GREAT_BALL] =
     {
         .name = ITEM_NAME("Great Ball"),
-        .price = 600,
+        .price = 400,
         .description = COMPOUND_STRING(
             "A good Ball with a\n"
             "higher catch rate\n"
@@ -82,12 +83,13 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = BALL_GREAT,
         .iconPic = gItemIcon_GreatBall,
         .iconPalette = gItemIconPalette_GreatBall,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_ULTRA_BALL] =
     {
         .name = ITEM_NAME("Ultra Ball"),
-        .price = (I_PRICE >= GEN_7) ? 800 : 1200,
+        .price = 600,
         .description = COMPOUND_STRING(
             "A better Ball with\n"
             "a higher catch rate\n"
@@ -98,6 +100,7 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = BALL_ULTRA,
         .iconPic = gItemIcon_UltraBall,
         .iconPalette = gItemIconPalette_UltraBall,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_MASTER_BALL] =
@@ -518,7 +521,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SUPER_POTION] =
     {
         .name = ITEM_NAME("Super Potion"),
-        .price = 700,
+        .price = 600,
         .holdEffectParam = 60,
         .description = COMPOUND_STRING(
             "Restores the HP of\n"
@@ -537,12 +540,13 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_Potion,
         .iconPalette = gItemIconPalette_SuperPotion,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_HYPER_POTION] =
     {
         .name = ITEM_NAME("Hyper Potion"),
-        .price = (I_PRICE >= GEN_2 && I_PRICE <= GEN_6) ? 1200 : 1500,
+        .price = 1200,
         .holdEffectParam = 120,
         .description = COMPOUND_STRING(
             "Restores the HP of\n"
@@ -561,12 +565,13 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_Potion,
         .iconPalette = gItemIconPalette_HyperPotion,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_MAX_POTION] =
     {
         .name = ITEM_NAME("Max Potion"),
-        .price = 2500,
+        .price = 2000,
         .holdEffectParam = 255,
         .description = COMPOUND_STRING(
             "Fully restores the\n"
@@ -580,12 +585,13 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_LargePotion,
         .iconPalette = gItemIconPalette_MaxPotion,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_FULL_RESTORE] =
     {
         .name = ITEM_NAME("Full Restore"),
-        .price = 3000,
+        .price = 2500,
         .holdEffectParam = 255,
         .description = COMPOUND_STRING(
             "Fully restores the\n"
@@ -600,6 +606,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_LargePotion,
         .iconPalette = gItemIconPalette_FullRestore,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_REVIVE] =
@@ -619,6 +626,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_Revive,
         .iconPalette = gItemIconPalette_Revive,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_MAX_REVIVE] =
@@ -874,6 +882,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_StatusHeal,
         .iconPalette = gItemIconPalette_BurnHeal,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_ICE_HEAL] =
@@ -903,6 +912,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_StatusHeal,
         .iconPalette = gItemIconPalette_IceHeal,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_AWAKENING] =
@@ -927,6 +937,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_StatusHeal,
         .iconPalette = gItemIconPalette_Awakening,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_FULL_HEAL] =
@@ -946,6 +957,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_FullHeal,
         .iconPalette = gItemIconPalette_FullHeal,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_ETHER] =
@@ -1548,6 +1560,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_AbilityCapsule,
         .iconPic = gItemIcon_AbilityCapsule,
         .iconPalette = gItemIconPalette_AbilityCapsule,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_ABILITY_PATCH] =
@@ -1566,6 +1579,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_AbilityPatch,
         .iconPic = gItemIcon_AbilityPatch,
         .iconPalette = gItemIconPalette_AbilityPatch,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
 // Mints
@@ -2211,7 +2225,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SUPER_REPEL] =
     {
         .name = ITEM_NAME("Super Repel"),
-        .price = (I_PRICE >= GEN_7) ? 700 : 500,
+        .price = (I_PRICE >= GEN_7) ? 800 : 500,
         .holdEffectParam = 200,
         .description = COMPOUND_STRING(
             "Repels weak wild\n"
@@ -2224,16 +2238,17 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_Repel,
         .iconPalette = gItemIconPalette_SuperRepel,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_MAX_REPEL] =
     {
         .name = ITEM_NAME("Max Repel"),
-        .price = (I_PRICE >= GEN_7) ? 900 : 700,
-        .holdEffectParam = 250,
+        .price = (I_PRICE >= GEN_7) ? 1400 : 700,
+        .holdEffectParam = 350,
         .description = COMPOUND_STRING(
             "Repels weak wild\n"
-            "Pokémon for 250\n"
+            "Pokémon for 350\n"
             "steps."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_FIELD_USE,
@@ -2242,6 +2257,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_Repel,
         .iconPalette = gItemIconPalette_MaxRepel,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
     [ITEM_LURE] =
@@ -2322,6 +2338,7 @@ const struct ItemInfo gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_EscapeRope,
         .iconPalette = gItemIconPalette_EscapeRope,
+        .shopCriteriaFunc = ShopCriteria_ByBadges,
     },
 
 // X items

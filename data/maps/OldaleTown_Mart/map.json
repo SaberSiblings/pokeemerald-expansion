@@ -3,7 +3,6 @@
   "name": "OldaleTown_Mart",
   "layout": "LAYOUT_MART",
   "music": "MUS_POKE_MART",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -17,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_OLDALE_MART_CLERK",
-      "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
       "x": 1,
       "y": 3,
       "elevation": 3,
@@ -32,9 +31,9 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
       "x": 5,
-      "y": 5,
+      "y": 4,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -47,9 +46,9 @@
       "x": 9,
       "y": 4,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
-      "movement_range_y": 1,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OldaleTown_Mart_EventScript_Boy",
@@ -58,14 +57,14 @@
   ],
   "warp_events": [
     {
-      "x": 3,
+      "x": 4,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN",
       "dest_warp_id": "3"
     },
     {
-      "x": 4,
+      "x": 5,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_OLDALE_TOWN",
@@ -73,5 +72,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "region": "REGION_HOENN"
 }

@@ -4,11 +4,13 @@ OldaleTown_Mart_MapScripts::
 OldaleTown_Mart_EventScript_Clerk::
 	lock
 	faceplayer
-	message gText_HowMayIServeYou
+	msgbox OldaleTown_Mart_Text_Feral, MSGBOX_DEFAULT
+	/*message gText_HowMayIServeYou
 	waitmessage
 	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_Mart_ExpandedItems
 	pokemart OldaleTown_Mart_Pokemart_Basic
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	pokemart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT*/
 	release
 	end
 
@@ -38,7 +40,7 @@ OldaleTown_Mart_Pokemart_Expanded:
 OldaleTown_Mart_EventScript_Woman::
 	lock
 	faceplayer
-	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_Mart_EventScript_PokeBallsInStock
+	//goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_Mart_EventScript_PokeBallsInStock
 	msgbox OldaleTown_Mart_Text_PokeBallsAreSoldOut, MSGBOX_DEFAULT
 	release
 	end
@@ -53,16 +55,30 @@ OldaleTown_Mart_EventScript_Boy::
 	end
 
 OldaleTown_Mart_Text_PokeBallsAreSoldOut:
-	.string "The clerk says they're all sold out.\n"
-	.string "I can't buy any POKé BALLS.$"
+	.string "You should look at the stats of\n"
+	.string "your Pokémon closely.\p"
+	.string "The more effort it puts in over\n"
+	.string "time, the more you can have it\l"
+	.string "use that effort to become strong.\p"
+	.string "The teacher at the Trainer School\n"
+	.string "in Rustboro has notes on it.$"
 
 OldaleTown_Mart_Text_ImGoingToBuyPokeBalls:
 	.string "I'm going to buy a bunch of POKé BALLS\n"
 	.string "and catch a bunch of Pokémon!$"
 
 OldaleTown_Mart_Text_RestoreHPWithPotion:
-	.string "If a Pokémon gets hurt and loses its HP\n"
-	.string "and faints, it won't be able to battle.\p"
-	.string "To prevent your Pokémon from fainting,\n"
-	.string "restore its HP with a POTION.$"
+	.string "I don't have any badges, so the Poké\n"
+	.string "Mart won't sell me good items.\p"
+	.string "More badges means more respect, which\n"
+	.string "gets you the good stuff.$"
 
+OldaleTown_Mart_Text_Feral:
+	.string "The wild Pokémon in this region\n"
+	.string "are particularly feral.\p"
+	.string "I don't think I've ever\n"
+	.string "seen a Normal-type Pokémon\l"
+	.string "among Hoenn's wildlife.\p"
+	.string "The Trainer School in Rustboro\n"
+	.string "just gave a class over this new\l"
+	.string "“Beast” type.$"

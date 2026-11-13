@@ -231,9 +231,9 @@ Route101_EventScript_BirchsBag::
 	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
 	closemessage
 	playse SE_PIN
-	applymovement LOCAL_ID_ROUTE101_BIRCH, Common_Movement_ExclamationMark
+	applymovement LOCALID_ROUTE101_BIRCH, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCAL_ID_ROUTE101_BIRCH, Common_Movement_Delay48
+	applymovement LOCALID_ROUTE101_BIRCH, Common_Movement_Delay48
 	waitmovement 0
 	msgbox Route101_Text_NewKid, MSGBOX_DEFAULT
 	closemessage
@@ -283,7 +283,7 @@ Route101_Text_YouSavedMe:
 	.string "Pokémon when I was jumped.\p"
 	.string "You sure saved me.\n"
 	.string "Thanks a lot!\p"
-	.string "Oh? You look familiar…\$"
+	.string "Oh? You look familiar…$"
 
 Route101_Text_NewKid:
 	.string "Wait, you're Norman's kid, right?\n"
@@ -296,21 +296,17 @@ Route101_Text_NewKid:
 	.string "to thank you properly!$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "Pokémon Centers heal your Pokémon when\n"
-	.string "they run out of energy.\p"
-	.string "They even do it for free!\p"
-	.string "Of course, the trade-off is that\n"
-	.string "our taxes are sky high.\p"
-	.string "But I'm a kid! I don't have\n"
-	.string "a taxable income! Yippee!$"
+	.string "If your Pokémon get tired,\n"
+	.string "take them to a Pokémon Center.\p"
+	.string "Littleroot's too small to\n"
+	.string "have one, but there's one\l"
+	.string "up ahead in Oldale Town.$"
 
 Route101_Text_WildPokemonInTallGrass:
 	.string "Wild Pokémon will jump out at you in\n"
 	.string "tall grass.\p"
 	.string "You should stay out of it if\n"
-	.string "you're not looking for a battle.\p"
-	.string "I'd pay for repels, but have you\n"
-	.string "seen our tax rate? Sheesh."
+	.string "you're not looking for a battle.$"
 
 Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
