@@ -9887,7 +9887,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Gyro Ball"),
         .description = COMPOUND_STRING(
             "A high-speed spin that does\n"
-            "more damage to faster a foe."),
+            "more damage to a faster foe."),
         .effect = EFFECT_GYRO_BALL,
         .power = 1,
         .type = TYPE_STEEL,

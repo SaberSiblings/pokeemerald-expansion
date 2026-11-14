@@ -1416,8 +1416,8 @@ gText_MonsHealedShouldBuyPotions::
 	.string "If your Pokémon's energy, HP,\n"
 	.string "is down, please come see us.\p"
 	.string "If you're planning to go far in the\n"
-	.string "field, you should buy some POTIONS\l"
-	.string "at the Pokémon MART.\p"
+	.string "field, you should buy some potions\l"
+	.string "at the Poké Mart.\p"
 	.string "We hope you excel!$"
 
 gText_MonsHealed::

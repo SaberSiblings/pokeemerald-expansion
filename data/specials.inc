@@ -447,6 +447,7 @@ gSpecials::
 	def_special IsPokemonJumpSpeciesInParty
 	def_special ShowPokemonJumpRecords, waitstate=1
 	def_special IsDodrioInParty
+	def_special IsSurskitInParty
 	def_special ShowDodrioBerryPickingRecords, waitstate=1
 	def_special OffsetCameraForBattle
 	def_special GetDeptStoreDefaultFloorChoice
