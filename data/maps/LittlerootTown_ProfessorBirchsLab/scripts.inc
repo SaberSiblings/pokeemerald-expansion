@@ -666,7 +666,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork:
 	.string "instead of a laboratory.\p"
 	.string "The professor isn't one for doing\n"
 	.string "desk work.\p"
-	.string "He's the type of person who would\l"
+	.string "He's the type of person who would\n"
 	.string "rather go outside and experience\l"
 	.string "things than read about them here.$"
 
@@ -728,12 +728,11 @@ LittlerootTown_ProfessorBirchsLab_Text_DontBeThatWay:
 	.string "At least one battle!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BirchRivalGoneHome:
-	.string "Prof. Birch: {RIVAL}?\n"
-	.string "Gone home, I think.\p"
-	.string "Or maybe that kid's scrabbling around\n"
-	.string "in tall grass again somewhere…\p"
-	.string "If you or your Pokémon get tired,\n"
-	.string "you should get some rest at home.$"
+	.string "Prof. Birch: Where's {RIVAL}?\n"
+	.string "Gone out, I think.\p"
+	.string "You have a Pokémon now.\n"
+	.string "Why don't you go explore outside\l"
+	.string "of Littleroot a bit?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_HeardYouBeatRivalTakePokedex:
 	.string "Prof. Birch: Oh, hi, {PLAYER}{KUN}!\p"

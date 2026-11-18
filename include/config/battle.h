@@ -2,18 +2,18 @@
 #define GUARD_CONFIG_BATTLE_H
 
 // Calculation settings
-#define B_CRIT_CHANCE               GEN_LATEST // Chances of landing a critical hit. See CalcCritChanceStage. Gen6+ chances guarantee a crit at 3 or more stages. Gen1 chances are based on half of the user's base Speed.
+#define B_CRIT_CHANCE               GEN_6      // Chances of landing a critical hit. See CalcCritChanceStage. Gen6+ chances guarantee a crit at 3 or more stages. Gen1 chances are based on half of the user's base Speed.
 #define B_CRIT_MULTIPLIER           GEN_LATEST // In Gen6+, critical hits increase damage by 1.5x instead of 2x.
 #define B_PARALYSIS_SPEED           GEN_LATEST // In Gen7+, paralysis decreases Speed by 50% instead of 75%.
 #define B_CONFUSION_SELF_DMG_CHANCE GEN_LATEST // In Gen7+, a Pokémon will hurt itself in confusion 1/3 of the time instead of half.
 #define B_MULTI_HIT_CHANCE          GEN_LATEST // In Gen5+, multistrike moves have different chances for the number of times they hit. See SetRandomMultiHitCounter for values.
 #define B_WHITEOUT_MONEY            GEN_LATEST // In Gen4+, the amount of money dropped after losing a battle is determined by the number of Badges obtained. Previously, half of the player's money would be dropped. (While this change was also in FRLG, for the sake of simplicity, setting this to GEN_3 will result in RSE behavior.)
 #define B_LIGHT_BALL_ATTACK_BOOST   GEN_LATEST // In Gen4+, Light Ball doubles Attack in addition to Sp. Atk.
-#define B_PARALYSIS_CHANCE          GEN_LATEST // In Champions, paralysis has a 12.5% chance of not moving, instead of 25%.
+#define B_PARALYSIS_CHANCE          GEN_9      // In Champions, paralysis has a 12.5% chance of not moving, instead of 25%.
 
 // Experience settings
 #define B_EXP_CATCH                 GEN_LATEST // In Gen6+, the party gains experience when the player catches another Pokémon.
-#define B_TRAINER_EXP_MULTIPLIER    GEN_LATEST // In Gen7+, Trainer battles no longer increase total experience by 1.5x.
+#define B_TRAINER_EXP_MULTIPLIER    GEN_6      // In Gen7+, Trainer battles no longer increase total experience by 1.5x.
 #define B_SPLIT_EXP                 GEN_LATEST // In Gen6+, all Pokémon that participate in a battle gain full experience. In Gen5 and earlier, the total experience would be evenly split across them.
 #define B_SCALED_EXP                GEN_LATEST // In Gen5 and Gen7+, experience gain is weighted by the difference between the levels of the player's Pokémon and the target.
 #define B_UNEVOLVED_EXP_MULTIPLIER  GEN_LATEST // In Gen6+, if a Pokémon is at or past the level where it would be able to evolve, but it has not, it gains ~1.2x experience. This only applies to species with the EVO_LEVEL method.
@@ -66,7 +66,7 @@
 #define B_RECALC_TURN_AFTER_ACTIONS GEN_LATEST // In Gen8+, switching or using a move affects the current turn's order of actions, better known as dynamic Speed.
 #define B_FAINT_SWITCH_IN           GEN_LATEST // In Gen4+, sending out a new Pokémon after the previous one fainted happens at the end of the turn. Previously, it would happen after each action.
 #define B_MEGA_EVO_SPEED_SWAP       GEN_LATEST // In Champions, Mega Evolution does not overwrite the speed stat swapped via Speed Swap.
-#define B_FREEZE_TURNS              GEN_LATEST // Prior to Champions, freeze has a 20% chance of being thawed out.
+#define B_FREEZE_TURNS              GEN_9      // Prior to Champions, freeze has a 20% chance of being thawed out.
                                                // As of Champions, freeze has a 25% chance of being thawed out with a hard cap of 3 turns.
 
 // Move data settings
@@ -208,7 +208,7 @@
 #define B_TRANSISTOR_BOOST              GEN_LATEST // In Gen9+, Transistor increases the power of Electric-type moves by 1.3x instead of 1.5x.
 #define B_ILLUMINATE_EFFECT             GEN_LATEST // In Gen9+, Illuminate prevents accuracy from being lowered and ignores the target's evasion. Previously, it had no in-battle effect.
 #define B_WEAK_ARMOR_SPEED              GEN_LATEST // In Gen7+, when hit by a physical move, Weak Armor raises Speed by 2 stages instead of 1.
-#define B_PROTEAN_LIBERO                GEN_LATEST // In Gen9+, Protean and Libero trigger only once per Battle.
+#define B_PROTEAN_LIBERO                GEN_8      // In Gen9+, Protean and Libero trigger only once per Battle.
 #define B_INTREPID_SWORD                GEN_LATEST // In Gen9+, Intrepid Sword triggers only once per battle.
 #define B_DAUNTLESS_SHIELD              GEN_LATEST // In Gen9+, Dauntless Shield triggers only once per battle.
 #define B_DISGUISE_HP_LOSS              GEN_LATEST // In Gen8+, when a disguised Mimikyu's Disguise is busted, upon changing to its Busted Form, it loses 1/8 of its max HP.
@@ -246,7 +246,7 @@
 #define B_TORMENT_TIMER      3
 
 // Item settings
-#define B_CONFUSE_BERRIES_HEAL      GEN_LATEST // In Gen8+, Figy and similar Berries heal 1/3 of max HP and activate at 25% HP. In Gen7, they restore half HP and activate at 25% HP. In Gen6 and earlier, they restore 1/8 of max HP and activate at half HP.
+#define B_CONFUSE_BERRIES_HEAL      GEN_7      // In Gen8+, Figy and similar Berries heal 1/3 of max HP and activate at 25% HP. In Gen7, they restore half HP and activate at 25% HP. In Gen6 and earlier, they restore 1/8 of max HP and activate at half HP.
 #define B_X_ITEMS_BUFF              GEN_LATEST // In Gen7+, X items raise a stat by 2 stages instead of 1.
 #define B_X_ITEMS_CROSSUSE          TRUE       // In Gen3, you can only use X items on the current battler, but in Gen7 you can use an X item on any friendly battler in double battles (we are not sure in which gen the change occured)
 #define B_MENTAL_HERB               GEN_LATEST // In Gen5+, Mental Herb cures Taunt, Encore, Torment, Heal Block, and Disable in addition to Infatuation from before.
@@ -327,14 +327,14 @@
 #define B_ICE_WEATHER_HAIL              1
 #define B_ICE_WEATHER_SNOW              2
 
-#define B_ABILITY_WEATHER               GEN_LATEST // In Gen6+, Ability-induced weather lasts 5 turns. In Gen5 and earlier, it lasted until the battle ended or until it was changed by another weather condition.
+#define B_ABILITY_WEATHER               GEN_5      // In Gen6+, Ability-induced weather lasts 5 turns. In Gen5 and earlier, it lasted until the battle ended or until it was changed by another weather condition.
 #define B_SANDSTORM_SPDEF_BOOST         GEN_LATEST // In Gen4+, sandstorm increases the Sp. Def of Rock-type Pokémon by 1.5x.
 #define B_SANDSTORM_SOLAR_BEAM          GEN_LATEST // In Gen3+, sandstorm decreases the power of Solar Beam.
 #define B_OVERWORLD_FOG                 GEN_LATEST // In Gen8+, overworld fog summons Misty Terrain in battle. In Gen4 only, overworld fog summons the unique fog weather condition in battle.
 #define B_OVERWORLD_SNOW                GEN_LATEST // In Gen9+, overworld snow will summon snow instead of hail in battle.
 #define B_SNOW_WARNING                  GEN_LATEST // In Gen9+, Snow Warning will summon snow instead of hail.
 #define B_PREFERRED_ICE_WEATHER         B_ICE_WEATHER_BOTH // Toggles hail move effects to snow and vice versa.
-#define B_OVERWORLD_WEATHER_OVERRIDE    GEN_LATEST // In Gen9+, overworld weather cannot be overridden.
+#define B_OVERWORLD_WEATHER_OVERRIDE    GEN_8      // In Gen9+, overworld weather cannot be overridden.
 
 // Terrain settings
 #define B_TERRAIN_BG_CHANGE         TRUE       // If set to TRUE, terrain moves permanently change the default battle background until the effect fades.
@@ -355,8 +355,8 @@
 #define B_SHOW_CATEGORY_ICON                TRUE       // If set to TRUE, an icon in the summary and move relearner will show a move's category.
 #define B_HIDE_HEALTHBOX_IN_ANIMS           TRUE       // If set to TRUE, healthboxes will be hidden during move animations.
 #define B_WAIT_TIME_MULTIPLIER              16         // This determines how long text pauses for in battle. Vanilla is 16. Lower values result in faster battles.
-#define B_QUICK_MOVE_CURSOR_TO_RUN          FALSE      // If set to TRUE, pushing B in the battle menu in a wild encounter will move the cursor to the Run option.
-#define B_RUN_TRAINER_BATTLE                TRUE       // If set to TRUE, players can run from Trainer battles as in Gen9+. This is treated as a white out.
+#define B_QUICK_MOVE_CURSOR_TO_RUN          TRUE       // If set to TRUE, pushing B in the battle menu in a wild encounter will move the cursor to the Run option.
+#define B_RUN_TRAINER_BATTLE                FALSE      // If set to TRUE, players can run from Trainer battles as in Gen9+. This is treated as a white out.
 #define B_MOVE_DESCRIPTION_BUTTON           L_BUTTON   // If set to a button other than B_LAST_USED_BALL_BUTTON, pressing this button will open the move description menu.
 #define B_SHOW_USELESS_Z_MOVE_INFO          FALSE      // If set to TRUE, Z-Moves without additional effects, like newer generation status moves, will say "No additional effect."
 #define B_ANIMATE_MON_AFTER_KO              TRUE       // If set to TRUE, if a Pokémon on the opposing side faints, the non-fainted Pokémon will play their animations.

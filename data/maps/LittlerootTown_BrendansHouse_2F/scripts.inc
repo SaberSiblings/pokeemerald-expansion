@@ -69,6 +69,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendan::
 	closemessage
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
+	playse SE_PIN
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_Delay48

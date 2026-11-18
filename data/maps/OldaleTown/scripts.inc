@@ -363,8 +363,7 @@ OldaleTown_Text_ThisIsAPokemonMart:
 	.string "This is a Pokémon Center.\n"
 	.string "Just look for the red roof.\p"
 	.string "We sell a variety of goods including\n"
-	.string "Poké balls for catching Pokémon, though\l"
-	.string "we're out of those at the moment.\p"
+	.string "Poké balls for catching Pokémon.\p"
 	.string "Here, I'd like you to have these, as\n"
 	.string "a free sample.$"
 
@@ -396,12 +395,12 @@ OldaleTown_Text_FinishedSketchingFootprints:
 OldaleTown_Text_MayLetsGoBack:
 	.string "May: {PLAYER}{KUN}!\n"
 	.string "Over here!\l"
-	.string "Let's hurry home!$"
+	.string "Let's hurry back!$"
 
 OldaleTown_Text_BrendanLetsGoBack:
-	.string "Brendan: I'm heading back to my dad's\n"
-	.string "LAB now.\l"
-	.string "{PLAYER}, you should hustle back, too.$"
+	.string "Brendan: {PLAYER}{KUN}!\n"
+	.string "Come on!\l"
+	.string "Let's hurry back!$"
 
 OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
