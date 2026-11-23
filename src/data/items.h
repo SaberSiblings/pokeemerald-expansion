@@ -13408,7 +13408,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 3000,
         .description = COMPOUND_STRING(
             "A high-speed spin\n"
-            "that does more damage\n"
+            "that does more\n"
             "to a faster foe."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,

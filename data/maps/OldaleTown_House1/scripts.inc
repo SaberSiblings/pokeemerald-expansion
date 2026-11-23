@@ -6,7 +6,8 @@ OldaleTown_House1_EventScript_Woman::
 	faceplayer
 	goto_if_set FLAG_OLDALE_TOWN_SURSKIT, OldaleTown_House1_EventScript_Received
 	msgbox OldaleTown_House1_Text_Surskit, MSGBOX_DEFAULT
-	special IsSurskitInParty
+	setvar VAR_0x8004, SPECIES_SURSKIT
+	special checkPokemonInParty
 	goto_if_eq VAR_RESULT, FALSE, OldaleTown_House1_EventScript_NoSurskit
 	closemessage
 	playse SE_PIN

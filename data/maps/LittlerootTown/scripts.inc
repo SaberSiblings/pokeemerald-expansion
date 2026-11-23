@@ -39,7 +39,7 @@ LittlerootTown_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_EventScript_MoveMomToMaysDoor
 	call_if_unset FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_SetTwinPos
-	call_if_eq VAR_LITTLEROOT_TOWN_STATE, 3, LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos
+	//call_if_eq VAR_LITTLEROOT_TOWN_STATE, 3, LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos
 	call_if_eq VAR_LITTLEROOT_HOUSES_STATE_MAY, 4, LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
 	call_if_eq VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4, LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
 	call_if_eq VAR_OLDALE_RIVAL_STATE, 1, LittlerootTown_EventScript_MoveRivalFromOldale
@@ -87,10 +87,10 @@ LittlerootTown_EventScript_SetTwinGuardingRoutePos::
 
 LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos::
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
-	setobjectmovementtype LOCALID_LITTLEROOT_MOM, MOVEMENT_TYPE_FACE_DOWN
+	/*setobjectmovementtype LOCALID_LITTLEROOT_MOM, MOVEMENT_TYPE_FACE_DOWN
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetMomInFrontOfDoorMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_SetMomInFrontOfDoorFemale
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_SetMomInFrontOfDoorFemale*/
 	return
 
 LittlerootTown_EventScript_SetMomInFrontOfDoorMale::
@@ -533,16 +533,24 @@ LittlerootTown_EventScript_PlayersHouseSignFemale::
 	return
 
 LittlerootTown_EventScript_GiveRunningShoesTrigger0::
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
+	addObject LOCALID_LITTLEROOT_MOM
+	addObject LOCALID_LITTLEROOT_ZIGZAGOON
 	lockall
 	setvar VAR_0x8008, 0
 	setobjectxy LOCALID_LITTLEROOT_MOM, 10, 9
+	setobjectxy LOCALID_LITTLEROOT_ZIGZAGOON, 11, 9
 	goto LittlerootTown_EventScript_GiveRunningShoesTrigger
 	end
 
 LittlerootTown_EventScript_GiveRunningShoesTrigger1::
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
+	addObject LOCALID_LITTLEROOT_MOM
+	addObject LOCALID_LITTLEROOT_ZIGZAGOON
 	lockall
 	setvar VAR_0x8008, 1
 	setobjectxy LOCALID_LITTLEROOT_MOM, 11, 9
+	setobjectxy LOCALID_LITTLEROOT_ZIGZAGOON, 10, 9
 	goto LittlerootTown_EventScript_GiveRunningShoesTrigger
 	end
 
@@ -631,6 +639,7 @@ LittlerootTown_EventScript_MomApproachPlayer0::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayer0
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON, LittlerootTown_Movement_MomApproachPlayer0
 	waitmovement 0
 	return
 
@@ -638,6 +647,7 @@ LittlerootTown_EventScript_MomApproachPlayer1::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayer1
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON, LittlerootTown_Movement_MomApproachPlayer1
 	waitmovement 0
 	return
 
@@ -716,12 +726,18 @@ LittlerootTown_EventScript_MomReturnHomeFemale::
 	return
 
 LittlerootTown_EventScript_MomReturnHome0::
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON, Common_Movement_WalkDown
+	waitmovement 0
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomReturnHome0
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON, LittlerootTown_Movement_MomReturnHome0
 	waitmovement 0
 	return
 
 LittlerootTown_EventScript_MomReturnHome1::
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON, Common_Movement_WalkDown
+	waitmovement 0
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomReturnHome1
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON, LittlerootTown_Movement_MomReturnHome1
 	waitmovement 0
 	return
 
@@ -998,15 +1014,71 @@ LittlerootTown_EventScript_SetReceivedRunningShoes::
 
 LittlerootTown_EventScript_GiveRunningShoes::
 	msgbox LittlerootTown_Text_WearTheseRunningShoes, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_Text_SwitchShoesWithRunningShoes
-	waitfanfare
+	closemessage
+
+	call_if_eq VAR_0x8008, 0, LittlerootTown_EventScript_Zigzagoon0
+	call_if_eq VAR_0x8008, 1, LittlerootTown_EventScript_Zigzagoon1
+
+	//playfanfare MUS_OBTAIN_ITEM
+
+	applymovement LOCALID_PLAYER, Common_Movement_FaceDown
+	msgbox LittlerootTown_Text_SwitchShoesWithRunningShoes, MSGBOX_DEFAULT
+
+	//waitfanfare
+	giveitem ITEM_TM_RETURN
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	msgbox LittlerootTown_Text_ExplainRunningShoes, MSGBOX_DEFAULT
+	closemessage
+
+	playse SE_PIN
+	applymovement LOCALID_LITTLEROOT_MOM, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_LITTLEROOT_MOM, Common_Movement_Delay48
+	waitmovement 0
 	msgbox LittlerootTown_Text_ComeHomeIfAnythingHappens, MSGBOX_DEFAULT
 	closemessage
+
+	playse SE_PIN
+	applymovement LOCALID_LITTLEROOT_MOM, Common_Movement_Heart
+	waitmovement 0
+	applymovement LOCALID_LITTLEROOT_MOM, Common_Movement_Delay48
+	waitmovement 0
 	delay 30
 	return
+
+LittlerootTown_EventScript_Zigzagoon0::
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON, LittlerootTown_Movement_Zigzagoon0
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
+	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
+	msgbox LittlerootTown_Text_Zigzagoon, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	return
+
+LittlerootTown_Movement_Zigzagoon0::
+	walk_up
+	walk_in_place_fast_left
+	step_end
+
+LittlerootTown_EventScript_Zigzagoon1::
+	applymovement LOCALID_LITTLEROOT_ZIGZAGOON, LittlerootTown_Movement_Zigzagoon1
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
+	msgbox LittlerootTown_Text_Zigzagoon, MSGBOX_DEFAULT
+	waitmoncry
+	closemessage
+	return
+
+LittlerootTown_Movement_Zigzagoon1::
+	walk_up
+	walk_in_place_fast_right
+	step_end
 
 LittlerootTown_Text_Greeting:
 	.string "Mom: {PLAYER}, we're here, honey!\p"
@@ -1036,34 +1108,44 @@ LittlerootTown_Text_WaitPlayer:
 	.string "Mom: Wait, {PLAYER}!$"
 
 LittlerootTown_Text_WearTheseRunningShoes:
-	.string "Mom: {PLAYER}! {PLAYER}! Did you\n"
+	.string "Mom: Where have you been? Did you\n"
 	.string "introduce yourself to Prof. Birch?\p"
+	.string "… … … … … … … … …\n"
+	.string "… … … … … … … … …\p"
 	.string "Oh! What an adorable Pokémon!\n"
-	.string "You got it from Prof. Birch. How nice!\p"
+	.string "You got it from Prof. Birch? How nice!\p"
 	.string "You're your father's child, all right.\n"
 	.string "You look good together with Pokémon!\p"
-	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these RUNNING SHOES.\p"
-	.string "They'll put a zip in your step!$"
+	.string "While you were out, I caught this\n"
+	.string "little one. Isn't it cute?$"
+
+LittlerootTown_Text_Zigzagoon::
+	.string "Zig zag!\n"
+	.string "Zagoon!$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
-	.string "{PLAYER} switched shoes with the\n"
-	.string "RUNNING SHOES.$"
+	.string "Mom: Still, your first Pokémon!\n"
+	.string "This deserves a celebration!\p"
+	.string "Here's a gift for you, dear.$"
 
 LittlerootTown_Text_ExplainRunningShoes:
-	.string "Mom: {PLAYER}, those shoes came with\n"
-	.string "instructions.\p"
-	.string "“Press the B Button while wearing these\n"
-	.string "RUNNING SHOES to run extra-fast!\p"
-	.string "“Slip on these RUNNING SHOES and race\n"
-	.string "in the great outdoors!”$"
-
-LittlerootTown_Text_ComeHomeIfAnythingHappens:
+	.string "Mom: That's a technical machine.\n"
+	.string "You can use it to teach your\l"
+	.string "Pokémon a move.\p"
+	.string "It's reusable, so feel free to\n"
+	.string "experiment with different moves!\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "To think that you have your very own\n"
 	.string "Pokémon now…\l"
-	.string "Your father will be overjoyed.\p"
+	.string "Your father will be overjoyed.$"
+
+LittlerootTown_Text_ComeHomeIfAnythingHappens:
+	.string "Your father!\p"
+	.string "{PLAYER}, you need to go to\n"
+	.string "Petalburg City and tell him!\p"
+	.string "He'll definitely want to know\n"
+	.string "what you've been up to.\p"
 	.string "…But please be careful.\n"
 	.string "If anything happens, you can come home.\p"
 	.string "Go on, go get them, honey!$"

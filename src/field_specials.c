@@ -1353,27 +1353,6 @@ void IsGrassTypeInParty(void)
     gSpecialVar_Result = FALSE;
 }
 
-void IsSurskitInParty(void)
-{
-    u8 i;
-    enum Species species;
-    struct Pokemon *pokemon;
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        pokemon = &gParties[B_TRAINER_PLAYER][i];
-        if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(pokemon, MON_DATA_IS_EGG))
-        {
-            species = GetMonData(pokemon, MON_DATA_SPECIES);
-            if (species == SPECIES_SURSKIT)
-            {
-                gSpecialVar_Result = TRUE;
-                return;
-            }
-        }
-    }
-    gSpecialVar_Result = FALSE;
-}
-
 void SpawnCameraObject(void)
 {
     u8 obj = SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_BOY_1,
@@ -5786,4 +5765,20 @@ bool8 CheckAddCoins(void)
         return FALSE;
     else
         return TRUE;
+}
+
+void checkPokemonInParty(void)
+{
+    u8 i;
+    enum Species target = gSpecialVar_0x8004;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *pokemon = &gParties[B_TRAINER_PLAYER][i];
+        if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(pokemon, MON_DATA_IS_EGG) && GetMonData(pokemon, MON_DATA_SPECIES) == target)
+        {
+            gSpecialVar_Result = TRUE;
+            return;
+        }
+    }
+    gSpecialVar_Result = FALSE;
 }
