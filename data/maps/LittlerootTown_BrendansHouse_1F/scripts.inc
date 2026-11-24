@@ -401,12 +401,10 @@ PlayersHouse_1F_Text_TheresAMovieOnTV:
 	.string "Better get going!$"
 
 PlayersHouse_1F_Text_RunningShoesManual:
-	.string "It's the instruction booklet for the\n"
-	.string "RUNNING SHOES.\p"
-	.string "“Press the B Button to run while\n"
-	.string "wearing your RUNNING SHOES.\p"
-	.string "“Lace up your RUNNING SHOES and hit\n"
-	.string "the road running!”$"
+	.string "It's a romance novel your Mom\n"
+	.string "was reading and set down.\p"
+	.string "You correctly decide that\n"
+	.string "you're a little young for it.$"
 
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
 	.string "Dad: Hm?\p"
